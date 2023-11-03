@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
@@ -7,42 +7,15 @@
 
     <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
     <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+    <title>NH Nepali Dictionary</title>
 
-    <title>
-
-
-
-        Soft UI Design System by Creative Tim
-
-
-    </title>
-
-
-
-    <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
-
-    <!-- Nucleo Icons -->
-    <link href="{{url('assets/css/nucleo-icons.css')}}" rel="stylesheet" />
-    <link href="{{url('assets/css/nucleo-svg.css')}}" rel="stylesheet" />
-
-    <!-- Font Awesome Icons -->
+    <link href="{{ url('assets/css/nucleo-icons.css') }}" rel="stylesheet" />
+    <link href="{{ url('assets/css/nucleo-svg.css') }}" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
     <link href="{{ url('assets/css/nucleo-svg.css') }}" rel="stylesheet" />
-
-    <!-- CSS Files -->
-
-
-
     <link id="pagestyle" href="{{ url('assets/css/soft-design-system.css') }}" rel="stylesheet" />
-
-
-
-
-
-    <!-- Nepcha Analytics (nepcha.com) -->
-    <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
-    <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
+    @livewireStyles()
 </head>
 
 <body class="index-page">
@@ -56,9 +29,9 @@
                     class="navbar navbar-expand-lg  blur blur-rounded top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
                     <div class="container-fluid px-0">
                         <a class="navbar-brand font-weight-bolder ms-sm-3"
-                            href="https://demos.creative-tim.com/soft-ui-design-system/index.html" rel="tooltip"
-                            title="Designed and Coded by Creative Tim" data-placement="bottom" target="_blank">
-                            Soft UI Design System
+                            href="{{url('/')}}" rel="tooltip"
+                            title="Developed by Hancie and Nitesh" wire:navigate data-placement="bottom">
+                            NH Nepali Dictionary
                         </a>
                         <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false"
@@ -76,7 +49,8 @@
                                         href="javascript:;" id="dropdownMenuPages" data-bs-toggle="dropdown"
                                         aria-expanded="false">
                                         Pages
-                                        <img src="{{url('assets/img/down-arrow-dark.svg')}}" alt="down-arrow" class="arrow ms-1">
+                                        <img src="{{ url('assets/img/down-arrow-dark.svg') }}" alt="down-arrow"
+                                            class="arrow ms-1">
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-animation dropdown-md p-3 border-radius-lg mt-0 mt-lg-3"
                                         aria-labelledby="dropdownMenuPages">
@@ -240,8 +214,8 @@
                                     <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
                                         href="javascript:;" id="dropdownMenuBlocks" data-bs-toggle="dropdown"
                                         aria-expanded="false">
-                                        Blocks
-                                        <img src="{{url('assets/img/down-arrow-dark.svg')}}" alt="down-arrow"
+                                        Grammers
+                                        <img src="{{ url('assets/img/down-arrow-dark.svg') }}" alt="down-arrow"
                                             class="arrow ms-1" />
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-animation dropdown-lg dropdown-lg-responsive p-3 border-radius-lg mt-0 mt-lg-3"
@@ -264,8 +238,8 @@
                                                                 <span class="text-sm">See all sections</span>
                                                             </div>
 
-                                                            <img src="{{url('assets/img/down-arrow.svg')}}" alt="down-arrow"
-                                                                class="arrow">
+                                                            <img src="{{ url('assets/img/down-arrow.svg') }}"
+                                                                alt="down-arrow" class="arrow">
                                                         </div>
                                                     </div>
                                                 </a>
@@ -429,22 +403,7 @@
                                                         href="./sections/elements/buttons.html">
                                                         Buttons
                                                     </a>
-                                                    <a class="dropdown-item ps-3 border-radius-md mb-1"
-                                                        href="./sections/elements/dropdowns.html">
-                                                        Dropdowns
-                                                    </a>
-                                                    <a class="dropdown-item ps-3 border-radius-md mb-1"
-                                                        href="./sections/elements/progress-bars.html">
-                                                        Progress Bars
-                                                    </a>
-                                                    <a class="dropdown-item ps-3 border-radius-md mb-1"
-                                                        href="./sections/elements/toggles.html">
-                                                        Toggles
-                                                    </a>
-                                                    <a class="dropdown-item ps-3 border-radius-md mb-1"
-                                                        href="./sections/elements/typography.html">
-                                                        Typography
-                                                    </a>
+
                                                 </div>
                                             </li>
                                         </div>
@@ -580,22 +539,7 @@
                                                     href="./sections/elements/buttons.html">
                                                     Buttons
                                                 </a>
-                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
-                                                    href="./sections/elements/dropdowns.html">
-                                                    Dropdowns
-                                                </a>
-                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
-                                                    href="./sections/elements/progress-bars.html">
-                                                    Progress Bars
-                                                </a>
-                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
-                                                    href="./sections/elements/toggles.html">
-                                                    Toggles
-                                                </a>
-                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
-                                                    href="./sections/elements/typography.html">
-                                                    Typography
-                                                </a>
+
                                             </div>
                                         </div>
 
@@ -606,8 +550,8 @@
                                     <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
                                         href="javascript:;" id="dropdownMenuDocs" data-bs-toggle="dropdown"
                                         aria-expanded="false">
-                                        Docs
-                                        <img src="./assets/img/down-arrow-dark.svg" alt="down-arrow"
+                                        Submit Words
+                                        <img src="{{ url('assets/img/down-arrow-dark.svg') }}" alt="down-arrow"
                                             class="arrow ms-1">
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-animation dropdown-lg mt-0 mt-lg-3 p-3 border-radius-lg"
@@ -916,156 +860,17 @@
                                                     </div>
                                                 </a>
 
-                                                <a class="dropdown-item py-2 ps-3 border-radius-md"
-                                                    href="./pages/about-us.html">
-                                                    <div class="d-flex">
-                                                        <div class="icon h-10 me-3 d-flex mt-1">
-                                                            <svg class="text-secondary" width="16px" height="16px"
-                                                                viewBox="0 0 42 42" version="1.1"
-                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                                <title>box-3d-50</title>
-                                                                <g stroke="none" stroke-width="1" fill="none"
-                                                                    fill-rule="evenodd">
-                                                                    <g transform="translate(-2319.000000, -291.000000)"
-                                                                        fill="#FFFFFF" fill-rule="nonzero">
-                                                                        <g
-                                                                            transform="translate(1716.000000, 291.000000)">
-                                                                            <g
-                                                                                transform="translate(603.000000, 0.000000)">
-                                                                                <path class="color-background"
-                                                                                    d="M22.7597136,19.3090182 L38.8987031,11.2395234 C39.3926816,10.9925342 39.592906,10.3918611 39.3459167,9.89788265 C39.249157,9.70436312 39.0922432,9.5474453 38.8987261,9.45068056 L20.2741875,0.1378125 L20.2741875,0.1378125 C19.905375,-0.04725 19.469625,-0.04725 19.0995,0.1378125 L3.1011696,8.13815822 C2.60720568,8.38517662 2.40701679,8.98586148 2.6540352,9.4798254 C2.75080129,9.67332903 2.90771305,9.83023153 3.10122239,9.9269862 L21.8652864,19.3090182 C22.1468139,19.4497819 22.4781861,19.4497819 22.7597136,19.3090182 Z">
-                                                                                </path>
-                                                                                <path class="color-background"
-                                                                                    d="M23.625,22.429159 L23.625,39.8805372 C23.625,40.4328219 24.0727153,40.8805372 24.625,40.8805372 C24.7802551,40.8805372 24.9333778,40.8443874 25.0722402,40.7749511 L41.2741875,32.673375 L41.2741875,32.673375 C41.719125,32.4515625 42,31.9974375 42,31.5 L42,14.241659 C42,13.6893742 41.5522847,13.241659 41,13.241659 C40.8447549,13.241659 40.6916418,13.2778041 40.5527864,13.3472318 L24.1777864,21.5347318 C23.8390024,21.7041238 23.625,22.0503869 23.625,22.429159 Z"
-                                                                                    opacity="0.7"></path>
-                                                                                <path class="color-background"
-                                                                                    d="M20.4472136,21.5347318 L1.4472136,12.0347318 C0.953235098,11.7877425 0.352562058,11.9879669 0.105572809,12.4819454 C0.0361450918,12.6208008 6.47121774e-16,12.7739139 0,12.929159 L0,30.1875 L0,30.1875 C0,30.6849375 0.280875,31.1390625 0.7258125,31.3621875 L19.5528096,40.7750766 C20.0467945,41.0220531 20.6474623,40.8218132 20.8944388,40.3278283 C20.963859,40.1889789 21,40.0358742 21,39.8806379 L21,22.429159 C21,22.0503869 20.7859976,21.7041238 20.4472136,21.5347318 Z"
-                                                                                    opacity="0.7"></path>
-                                                                            </g>
-                                                                        </g>
-                                                                    </g>
-                                                                </g>
-                                                            </svg>
-                                                        </div>
-                                                        <div>
-                                                            <h6
-                                                                class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
-                                                                Components</h6>
-                                                            <span class="text-sm">Explore our collection of fully
-                                                                designed components</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
 
-                                                <a class="dropdown-item py-2 ps-3 border-radius-md"
-                                                    href="./pages/about-us.html">
-                                                    <div class="d-flex">
-                                                        <div class="icon h-10 me-3 d-flex mt-1">
-                                                            <svg class="text-secondary" width="16px" height="16px"
-                                                                viewBox="0 0 40 44" version="1.1"
-                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                                <title>switches</title>
-                                                                <g stroke="none" stroke-width="1" fill="none"
-                                                                    fill-rule="evenodd">
-                                                                    <g transform="translate(-1870.000000, -440.000000)"
-                                                                        fill="#FFFFFF" fill-rule="nonzero">
-                                                                        <g
-                                                                            transform="translate(1716.000000, 291.000000)">
-                                                                            <g
-                                                                                transform="translate(154.000000, 149.000000)">
-                                                                                <path class="color-background"
-                                                                                    d="M10,20 L30,20 C35.4545455,20 40,15.4545455 40,10 C40,4.54545455 35.4545455,0 30,0 L10,0 C4.54545455,0 0,4.54545455 0,10 C0,15.4545455 4.54545455,20 10,20 Z M10,3.63636364 C13.4545455,3.63636364 16.3636364,6.54545455 16.3636364,10 C16.3636364,13.4545455 13.4545455,16.3636364 10,16.3636364 C6.54545455,16.3636364 3.63636364,13.4545455 3.63636364,10 C3.63636364,6.54545455 6.54545455,3.63636364 10,3.63636364 Z"
-                                                                                    opacity="0.6"></path>
-                                                                                <path class="color-background"
-                                                                                    d="M30,23.6363636 L10,23.6363636 C4.54545455,23.6363636 0,28.1818182 0,33.6363636 C0,39.0909091 4.54545455,43.6363636 10,43.6363636 L30,43.6363636 C35.4545455,43.6363636 40,39.0909091 40,33.6363636 C40,28.1818182 35.4545455,23.6363636 30,23.6363636 Z M30,40 C26.5454545,40 23.6363636,37.0909091 23.6363636,33.6363636 C23.6363636,30.1818182 26.5454545,27.2727273 30,27.2727273 C33.4545455,27.2727273 36.3636364,30.1818182 36.3636364,33.6363636 C36.3636364,37.0909091 33.4545455,40 30,40 Z">
-                                                                                </path>
-                                                                            </g>
-                                                                        </g>
-                                                                    </g>
-                                                                </g>
-                                                            </svg>
-                                                        </div>
-                                                        <div>
-                                                            <h6
-                                                                class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
-                                                                Plugins</h6>
-                                                            <span class="text-sm">Check how you can integrate our
-                                                                plugins</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
 
-                                                <a class="dropdown-item py-2 ps-3 border-radius-md"
-                                                    href="./pages/about-us.html">
-                                                    <div class="d-flex">
-                                                        <div class="icon h-10 me-3 d-flex mt-1">
-                                                            <svg class="text-secondary" width="16px" height="16px"
-                                                                viewBox="0 0 40 40" version="1.1"
-                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                                <title>settings</title>
-                                                                <g stroke="none" stroke-width="1" fill="none"
-                                                                    fill-rule="evenodd">
-                                                                    <g transform="translate(-2020.000000, -442.000000)"
-                                                                        fill="#FFFFFF" fill-rule="nonzero">
-                                                                        <g
-                                                                            transform="translate(1716.000000, 291.000000)">
-                                                                            <g
-                                                                                transform="translate(304.000000, 151.000000)">
-                                                                                <polygon class="color-background"
-                                                                                    opacity="0.596981957"
-                                                                                    points="18.0883333 15.7316667 11.1783333 8.82166667 13.3333333 6.66666667 6.66666667 0 0 6.66666667 6.66666667 13.3333333 8.82166667 11.1783333 15.315 17.6716667">
-                                                                                </polygon>
-                                                                                <path class="color-background"
-                                                                                    d="M31.5666667,23.2333333 C31.0516667,23.2933333 30.53,23.3333333 30,23.3333333 C29.4916667,23.3333333 28.9866667,23.3033333 28.48,23.245 L22.4116667,30.7433333 L29.9416667,38.2733333 C32.2433333,40.575 35.9733333,40.575 38.275,38.2733333 L38.275,38.2733333 C40.5766667,35.9716667 40.5766667,32.2416667 38.275,29.94 L31.5666667,23.2333333 Z"
-                                                                                    opacity="0.596981957"></path>
-                                                                                <path class="color-background"
-                                                                                    d="M33.785,11.285 L28.715,6.215 L34.0616667,0.868333333 C32.82,0.315 31.4483333,0 30,0 C24.4766667,0 20,4.47666667 20,10 C20,10.99 20.1483333,11.9433333 20.4166667,12.8466667 L2.435,27.3966667 C0.95,28.7083333 0.0633333333,30.595 0.00333333333,32.5733333 C-0.0583333333,34.5533333 0.71,36.4916667 2.11,37.89 C3.47,39.2516667 5.27833333,40 7.20166667,40 C9.26666667,40 11.2366667,39.1133333 12.6033333,37.565 L27.1533333,19.5833333 C28.0566667,19.8516667 29.01,20 30,20 C35.5233333,20 40,15.5233333 40,10 C40,8.55166667 39.685,7.18 39.1316667,5.93666667 L33.785,11.285 Z">
-                                                                                </path>
-                                                                            </g>
-                                                                        </g>
-                                                                    </g>
-                                                                </g>
-                                                            </svg>
-                                                        </div>
-                                                        <div>
-                                                            <h6
-                                                                class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
-                                                                Utility Classes</h6>
-                                                            <span class="text-sm">All about overview, quick start,
-                                                                license and contents</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
+
+
+
                                             </div>
                                         </div>
 
                                     </div>
                                 </li>
-                                <li class="nav-item ms-lg-auto">
-                                    <a class="nav-link nav-link-icon me-2"
-                                        href="https://github.com/creativetimofficial/soft-ui-design-system"
-                                        target="_blank">
-                                        <i class="fa fa-github me-1"></i>
-                                        <p class="d-inline text-sm z-index-1 font-weight-bold"
-                                            data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                            title="Star us on Github">Github</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item my-auto ms-3 ms-lg-0">
-                                    <a href="https://www.creative-tim.com/builder?ref=navbar-soft-design-system"
-                                        class="btn btn-sm btn-outline-primary btn-round mb-0 me-1 mt-2 mt-md-0">Online
-                                        Builder</a>
-                                </li>
-                                <li class="nav-item my-auto ms-3 ms-lg-0">
 
-                                    <a href="https://www.creative-tim.com/product/soft-ui-design-system-pro"
-                                        class="btn btn-sm  bg-gradient-primary  btn-round mb-0 me-1 mt-2 mt-md-0">Upgrade
-                                        to Pro</a>
-
-                                </li>
                             </ul>
                         </div>
                     </div>
@@ -1095,14 +900,13 @@
 
 
     <header class="header-2">
-        <div class="page-header min-vh-55 relative"
-            style="background-image: url('./assets/img/curved.jpg')">
+        <div class="page-header min-vh-55 relative" style="background-image: url('./assets/img/curved.jpg')">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-7 text-center mx-auto">
                         <h1 class="text-white pt-3 mt-n5">NH Nepali Dictionary</h1>
                         <p class="lead text-white mt-3">Search English to Nepali Meaning<br />
-                            </p>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -1132,35 +936,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-9 z-index-2 border-radius-xl mt-n10 mx-auto py-3 blur shadow-blur">
-                    <div class="row">
-                        <div class="col-md-4 position-relative">
-                            <div class="p-3 text-center">
-                                <h1 class="text-gradient text-primary"><span id="state1" countTo="70">0</span>+
-                                </h1>
-                                <h5 class="mt-3">Coded Elements</h5>
-                                <p class="text-sm">From buttons, to inputs, navbars, alerts or cards, you are covered
-                                </p>
-                            </div>
-                            <hr class="vertical dark">
-                        </div>
-                        <div class="col-md-4 position-relative">
-                            <div class="p-3 text-center">
-                                <h1 class="text-gradient text-primary"> <span id="state2" countTo="15">0</span>+
-                                </h1>
-                                <h5 class="mt-3">Design Blocks</h5>
-                                <p class="text-sm">Mix the sections, change the colors and unleash your creativity</p>
-                            </div>
-                            <hr class="vertical dark">
-                        </div>
-                        <div class="col-md-4">
-                            <div class="p-3 text-center">
-                                <h1 class="text-gradient text-primary" id="state3" countTo="4">0</h1>
-                                <h5 class="mt-3">Pages</h5>
-                                <p class="text-sm">Save 3-4 weeks of work when you use our pre-made pages for your
-                                    website</p>
-                            </div>
-                        </div>
-                    </div>
+
+                    @livewire('dictionary-component')
+
                 </div>
             </div>
         </div>
@@ -1219,8 +997,7 @@
             <div class=" row">
                 <div class="col-md-3 mb-4 ms-auto">
                     <div>
-                        <h6 class="text-gradient text-primary font-weight-bolder">Soft UI Design
-                            System</h6>
+                        <h6 class="text-gradient text-primary font-weight-bolder">NH Nepali Dictionary</h6>
                     </div>
                     <div>
                         <h6 class="mt-3 mb-2 opacity-8">Social</h6>
@@ -1388,9 +1165,9 @@
                             All rights reserved. Copyright ©
                             <script>
                                 document.write(new Date().getFullYear())
-                            </script> Soft UI Design System by <a href="https://www.creative-tim.com"
-                                target="_blank">Creative
-                                Tim</a>.
+                            </script> NH Nepali Dictionary by <a href="https://www.creative-tim.com"
+                                target="_blank">Hancie Phago and Nitesh Hamal
+                            </a>.
                         </p>
                     </div>
                 </div>
@@ -1399,76 +1176,18 @@
     </footer>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!--   Core JS Files   -->
     <script src="{{ url('assets/js/popper.min.js') }}" type="text/javascript"></script>
     <script src="{{ url('assets/js/bootstrap.min.js') }}" type="text/javascript"></script>
     <script src="{{ url('assets/js/perfect-scrollbar.min.js') }}"></script>
-
-
-
-
-    <!--  Plugin for TypedJS, full documentation here: https://github.com/inorganik/CountUp.js -->
     <script src="{{ url('assets/js/countup.min.js') }}"></script>
-
-
-
-
-
     <script src="{{ url('assets/js/choices.min.js') }}"></script>
-
-
-
-
-
     <script src="{{ url('assets/js/prism.min.js') }}"></script>
-    {{-- <script src="./assets/js/plugins/highlight.min.js"></script> --}}
-
-
-
-
-
-    <!--  Plugin for Parallax, full documentation here: https://github.com/dixonandmoe/rellax -->
     <script src="{{ url('assets/js/rellax.min.js') }}"></script>
-    <!--  Plugin for TiltJS, full documentation here: https://gijsroge.github.io/tilt.js/ -->
     <script src="{{ url('assets/js/tilt.min.js') }}"></script>
-    <!--  Plugin for Selectpicker - ChoicesJS, full documentation here: https://github.com/jshjohnson/Choices -->
     <script src="{{ url('assets/js/choices.min.js') }}"></script>
-
-
-    <!--  Plugin for Parallax, full documentation here: https://github.com/wagerfield/parallax  -->
     <script src="{{ url('assets/js/parallax.min.js') }}"></script>
-
-
-
-
-
-
-
-
-    <!-- Control Center for Soft UI Kit: parallax effects, scripts for the example pages etc -->
-    <!--  Google Maps Plugin    -->
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
-    <script src="{{url('assets/js/soft-design-system.min.js')}}" type="text/javascript"></script>
+    <script src="{{ url('assets/js/soft-design-system.min.js') }}" type="text/javascript"></script>
 
 
     <script type="text/javascript">
@@ -1526,7 +1245,7 @@
 
 
 
-
+@livewireScripts()
 </body>
 
 </html>
