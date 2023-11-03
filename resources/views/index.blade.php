@@ -28,9 +28,7 @@
                 <nav
                     class="navbar navbar-expand-lg  blur blur-rounded top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
                     <div class="container-fluid px-0">
-                        <a class="navbar-brand font-weight-bolder ms-sm-3"
-                            href="{{url('/')}}" rel="tooltip"
-                            title="Developed by Hancie and Nitesh" wire:navigate data-placement="bottom">
+                        <a class="navbar-brand font-weight-bolder ms-sm-3" href="{{ url('/') }}">
                             NH Nepali Dictionary
                         </a>
                         <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse"
@@ -1165,8 +1163,8 @@
                             All rights reserved. Copyright ©
                             <script>
                                 document.write(new Date().getFullYear())
-                            </script> NH Nepali Dictionary by <a href="https://www.creative-tim.com"
-                                target="_blank">Hancie Phago and Nitesh Hamal
+                            </script> NH Nepali Dictionary by <a href="{{url('/')}}"
+                                target="_blank" wire:navigate>Hancie Phago and Nitesh Hamal
                             </a>.
                         </p>
                     </div>
@@ -1177,6 +1175,7 @@
 
 
     <!--   Core JS Files   -->
+    @livewireScripts
     <script src="{{ url('assets/js/popper.min.js') }}" type="text/javascript"></script>
     <script src="{{ url('assets/js/bootstrap.min.js') }}" type="text/javascript"></script>
     <script src="{{ url('assets/js/perfect-scrollbar.min.js') }}"></script>
@@ -1245,7 +1244,7 @@
 
 
 
-@livewireScripts()
+
 </body>
 
 </html>
