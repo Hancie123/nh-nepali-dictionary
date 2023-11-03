@@ -4,9 +4,11 @@ namespace App\Livewire;
 
 use App\Models\Dictionary;
 use Livewire\Component;
+use Livewire\Attributes\Url;
 
 class DictionaryComponent extends Component
 {
+    #[Url]
     public $word="";
     public $definition;
     public $nepaliMeaning;
@@ -18,6 +20,10 @@ class DictionaryComponent extends Component
         if ($word) {
             // If a parameter is provided, use it
             $this->word = $word;
+
+        }elseif (empty($this->word)) {
+            $this->word = null;
+            
         } else {
             // If no parameter is provided, use the input value
             $this->word;
