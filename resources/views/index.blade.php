@@ -7,8 +7,9 @@
     <title>NH Nepali Dictionary</title>
     @include('layouts/header')
     <meta property="og:title" content="NH Nepali Dictionary">
-    <meta property="og:description" content="NH Nepali Dictionary">
-    <meta property="og:image" content="">
+    <meta property="og:description"
+        content="NH Nepali Dictionary is an online web application that gives a meaning of English words to Nepali.">
+    <meta property="og:image" content="{{ url('assets/img/logo.png') }}">
     <meta property="og:url" content="{{ request()->fullUrl() }}">
 
 
