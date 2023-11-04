@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,3 +29,5 @@ Route::get('/about-us', function () {
 Route::get('/contributors', function () {
     return view('contributors');
 });
+
+Route::get('/login',[LoginController::class,'index']);
