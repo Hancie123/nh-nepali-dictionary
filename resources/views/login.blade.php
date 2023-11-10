@@ -84,8 +84,14 @@
             <div class="row">
                 <div class="col-sm-12">
                     <!-- Authentication card start -->
+                    @if (Session::has('error'))
+                    <span>{{Session::get('error')}}<span>
 
-                    <form class="md-float-material form-material rounded">
+                    @endif
+
+                    <form class="md-float-material form-material rounded" action="{{ url('/admin/login') }}"
+                        method="post">
+                        @csrf
                         <div class="text-center">
                             <img src="{{ url('assets/img/dictionarylogo.png') }}" alt="logo.png" style="width:250px;">
                         </div>
@@ -100,11 +106,17 @@
                                     <input type="text" name="email" class="form-control">
                                     <span class="form-bar"></span>
                                     <label class="float-label">Your Email Address</label>
+                                    @error('email')
+                                        <span class="text-danger">{{$message}}</span>
+                                    @enderror
                                 </div>
                                 <div class="form-group form-primary">
                                     <input type="password" name="password" class="form-control">
                                     <span class="form-bar"></span>
                                     <label class="float-label">Password</label>
+                                    @error('password')
+                                        <span class="text-danger">{{$message}}</span>
+                                    @enderror
                                 </div>
                                 <div class="row m-t-25 text-left">
                                     <div class="col-12">

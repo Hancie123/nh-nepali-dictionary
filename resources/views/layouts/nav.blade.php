@@ -43,8 +43,8 @@
                                         <a href="{{url('contributors')}}" class="dropdown-item border-radius-md">
                                             <span class="ps-3">Contributors</span>
                                         </a>
-                                        <a href="{{url('/login')}}" class="dropdown-item border-radius-md">
-                                            <span class="ps-3">Login</span>
+                                        <a href="{{url('/admin/login')}}" class="dropdown-item border-radius-md">
+                                            <span class="ps-3">Admin Account</span>
                                         </a>
 
                                     </div>
@@ -63,8 +63,8 @@
                                         <a href="{{url('contributors')}}" class="dropdown-item border-radius-md">
                                             <span class="ps-3">Contributors</span>
                                         </a>
-                                        <a href="{{url('/login')}}" class="dropdown-item border-radius-md">
-                                            <span class="ps-3">Login</span>
+                                        <a href="{{url('/admin/login')}}" class="dropdown-item border-radius-md">
+                                            <span class="ps-3">Admin Account</span>
                                         </a>
 
 

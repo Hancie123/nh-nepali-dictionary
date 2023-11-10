@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\Dashboard;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\SettingController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,4 +33,10 @@ Route::get('/contributors', function () {
     return view('contributors');
 });
 
-Route::get('/login',[LoginController::class,'index']);
+Route::get('/admin/login', [LoginController::class, 'index'])->name('admin.login');
+Route::post('/admin/login', [LoginController::class, 'store']);
+
+Route::group(['middleware'=>'auth:web'], function () {
+    Route::get('/admin/dashboard', [DashboardController::class, 'index']);
+    Route::get('/admin/setting', [SettingController::class, 'index']);
+});
