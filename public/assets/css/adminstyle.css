@@ -5312,15 +5312,7 @@ table tbody .border-bottom-info td {
 	position: relative;
 }
 
-.pcoded .pcoded-navbar .pcoded-item:after {
-	content: "";
-	background-color: #e4e9eb;
-	width: 80%;
-	height: 1px;
-	position: absolute;
-	left: 10%;
-	bottom: 10px;
-}
+
 
 .pcoded .pcoded-navbar .pcoded-item>li {
 	display: block;

@@ -13,6 +13,19 @@ class LoginController extends Controller
         return view('login');
     }
 
+    public function logout(Request $request){
+        $user = $request->user();
+        if ($user) {
+            auth()->logout();
+
+            sweetalert()->addSuccess('Logout Successfully!');
+            return redirect('/admin/login');
+        } else {
+            sweetalert()->addSuccess('User is not authenticated!');
+            return redirect('/admin/login');
+        }
+    }
+
     public function store(LoginRequest $request)
     {
         $credential = $request->only('email', 'password');

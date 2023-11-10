@@ -39,4 +39,5 @@ Route::post('/admin/login', [LoginController::class, 'store']);
 Route::group(['middleware'=>'auth:web'], function () {
     Route::get('/admin/dashboard', [DashboardController::class, 'index']);
     Route::get('/admin/setting', [SettingController::class, 'index']);
+    Route::get('/logout', [LoginController::class, 'logout']);
 });
