@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.0/dist/trix.css">
     <script type="text/javascript" src="https://unpkg.com/trix@2.0.0/dist/trix.umd.min.js"></script>
 
+
+    
 </head>
 
 <body>
@@ -135,7 +137,8 @@
                                                 <div class="container">
                                                     <div class="row">
                                                         <div class="col-12">
-                                                            <button type="submit" class="btn btn-primary mt-4" >Submit</button>
+                                                            <button type="submit"
+                                                                class="btn btn-primary mt-4">Submit</button>
                                                         </div>
                                                     </div>
                                                 </div>
