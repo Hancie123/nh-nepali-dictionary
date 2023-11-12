@@ -12,6 +12,10 @@ class DictionaryController extends Controller
         return view('admin.dictionary-upload-meanings');
     }
 
+    public function dictionaryManagement(){
+        return view('admin.dictionary_management');
+    }
+
     public function store(CreateDictionaryRequest $request){
 
     }

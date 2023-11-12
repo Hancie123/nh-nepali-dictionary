@@ -41,6 +41,7 @@ Route::group(['middleware'=>'auth:web'], function () {
     Route::get('/admin/dashboard', [DashboardController::class, 'index']);
     Route::get('/admin/setting', [SettingController::class, 'index']);
     Route::get('/logout', [LoginController::class, 'logout']);
+    Route::get('admin/meaning/management',[DictionaryController::class,'dictionaryManagement']);
     Route::get('admin/meaning/upload',[DictionaryController::class,'index']);
     Route::post('admin/meaning/upload',[DictionaryController::class,'store']);
 });
