@@ -107,8 +107,15 @@
                                     <div class="page-body">
 
 
+                                        <div class="container">
+                                            <div class="card">
+                                                <div class="card-header">Manage Users</div>
+                                                <div class="card-body">
+                                                    {{ $dataTable->table() }}
+                                                </div>
+                                            </div>
+                                        </div>
 
-                                       
 
 
                                     </div>
@@ -125,6 +132,11 @@
 
 
     @include('layouts.adminfooter')
+
+    @push('scripts')
+    {{ $dataTable->scripts() }}
+    
+@endpush
 </body>
 
 </html>

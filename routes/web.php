@@ -6,6 +6,7 @@ use App\Http\Controllers\DictionaryController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\SettingController;
 use Illuminate\Support\Facades\Route;
+use Yajra\DataTables\Facades\DataTables;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,7 +42,9 @@ Route::group(['middleware'=>'auth:web'], function () {
     Route::get('/admin/dashboard', [DashboardController::class, 'index']);
     Route::get('/admin/setting', [SettingController::class, 'index']);
     Route::get('/logout', [LoginController::class, 'logout']);
-    Route::get('admin/meaning/management',[DictionaryController::class,'dictionaryManagement']);
+    Route::get('admin/meaning/management',[DictionaryController::class,'dictionaryManagement'])->name('admin.dictionary_management');
+
+
     Route::get('admin/meaning/upload',[DictionaryController::class,'index']);
     Route::post('admin/meaning/upload',[DictionaryController::class,'store']);
 });
