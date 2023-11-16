@@ -23,7 +23,7 @@ class DictionaryComponent extends Component
 
         }elseif (empty($this->word)) {
             $this->word = null;
-            
+
         } else {
             // If no parameter is provided, use the input value
             $this->word;
@@ -32,7 +32,7 @@ class DictionaryComponent extends Component
 
         if ($dictionaryEntry) {
             $this->definition = $dictionaryEntry->Meaning;
-            $this->nepaliMeaning = $dictionaryEntry->{'Meaning in Nepali'};
+            $this->nepaliMeaning = $dictionaryEntry->nepali_meaning;
         } else {
             $this->definition = 'Word not found in the dictionary.';
             $this->nepaliMeaning=null;
