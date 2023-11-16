@@ -65,7 +65,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                @foreach ($data as $datas)
+                                @forelse ($data as $datas)
                                     <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                                         <div class="h-100 border p-4 rounded-lg text-center rounded">
                                             <img alt="team"
@@ -77,7 +77,12 @@
                                             </p>
                                         </div>
                                     </div>
-                                @endforeach
+                                @empty
+                                    <div class="col-12 text-center">
+                                        <p>No data available.</p>
+                                    </div>
+                                @endforelse
+
 
 
                             </div>
