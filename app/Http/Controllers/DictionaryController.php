@@ -16,8 +16,14 @@ class DictionaryController extends Controller
         return view('admin.dictionary-upload-meanings');
     }
 
-    public function dictionaryManagement(DictionaryDataTable $dataTable){
-        return $dataTable->render('admin.dictionary_management');
+    public function dictionaryManagement(){
+
+        return view('admin.dictionary_management');
+    }
+
+    public function getDictionaryData(){
+        $dictionary=Dictionary::latest()->get();
+        return response()->json(['data'=>$dictionary]);
     }
 
     public function store(CreateDictionaryRequest $request){
