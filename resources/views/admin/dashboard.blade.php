@@ -125,11 +125,12 @@
                                                             <div class="col-sm-6 p-b-20 p-t-20">
                                                                 <div class="row align-items-center text-center">
                                                                     <div class="col-4 p-r-0">
-                                                                        <i class="fas fa-volume-down text-c-green f-24"></i>
+                                                                        
+                                                                        <i class="bx bx-donate-heart text-c-green f-24"></i>
                                                                     </div>
                                                                     <div class="col-8 p-l-0">
-                                                                        <h5>100%</h5>
-                                                                        <p class="text-muted m-b-0">Volume</p>
+                                                                        <h5>{{$data['countContributors']}}</h5>
+                                                                        <p class="text-muted m-b-0">Contributors</p>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -141,7 +142,7 @@
                                                                         <i class="far fa-file-alt text-c-red f-24"></i>
                                                                     </div>
                                                                     <div class="col-8 p-l-0">
-                                                                        <h5>{{$countwords}}</h5>
+                                                                        <h5>{{ $data['countWords'] }}</h5>
                                                                         <p class="text-muted m-b-0">Words</p>
                                                                     </div>
                                                                 </div>
@@ -279,7 +280,7 @@
                                                                             </div>
                                                                         </td>
                                                                         <td class="text-right">
-                                                                            <h6 class="f-w-700">$78.001<i class="fas fa-level-down-alt text-c-red m-l-10"></i></h6>
+                                                                            <h6 class="f-w-700">$78.002<i class="fas fa-level-down-alt text-c-red m-l-10"></i></h6>
                                                                         </td>
                                                                     </tr>
                                                                     <tr>

@@ -10,6 +10,7 @@
 <link rel="apple-touch-icon" sizes="76x76" href="{{ url('assets/img/logo.png') }}">
 <link rel="icon" type="image/png" href="{{ url('assets/img/logo.png') }}">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 <!-- Required Fremwork -->
 <link rel="stylesheet" type="text/css" href="{{ url('assets/css/adminbootstrap.min.css') }}">

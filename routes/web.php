@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContributorController;
 use App\Http\Controllers\Dashboard;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DictionaryController;
@@ -31,9 +32,7 @@ Route::get('/about-us', function () {
     return view('about_us');
 });
 
-Route::get('/contributors', function () {
-    return view('contributors');
-});
+Route::get('/contributors',[ContributorController::class,'publicIndex']);
 
 Route::get('/admin/login', [LoginController::class, 'index'])->name('admin.login');
 Route::post('/admin/login', [LoginController::class, 'store']);
@@ -48,4 +47,7 @@ Route::group(['middleware'=>'auth:web'], function () {
     Route::get('admin/meaning/upload',[DictionaryController::class,'index']);
     Route::get('admin/dictionary',[DictionaryController::class,'getDictionaryData']);
     Route::post('admin/meaning/upload',[DictionaryController::class,'store']);
+
+    Route::get('admin/contributors',[ContributorController::class,'index']);
+    Route::get('admin/contributors/ajax',[ContributorController::class,'getDataAjax']);
 });

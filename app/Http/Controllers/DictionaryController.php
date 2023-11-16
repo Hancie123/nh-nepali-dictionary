@@ -6,6 +6,7 @@ use App\DataTables\DictionariesDataTable;
 use App\DataTables\DictionaryDataTable;
 use App\Http\Requests\Dictionary\CreateDictionaryRequest;
 use App\Models\Dictionary;
+use App\Models\UserAddedMeaning;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -34,6 +35,12 @@ class DictionaryController extends Controller
                     'Words'=>$request->word,
                     'Meaning'=>$request->english_meaning,
                     'nepali_meaning'=>$request->nepali_meaning
+                ]);
+
+                UserAddedMeaning::create([
+                    'word_id'=>$dictionary->id,
+                    'user_id'=>auth()->user()->id,
+
                 ]);
                 return $dictionary;
 

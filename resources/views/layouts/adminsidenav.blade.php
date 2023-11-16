@@ -73,6 +73,13 @@
 
                     </ul>
                 </li>
+                <li class="{{ request()->is('admin/contributors') ? 'active' : null }}">
+                    <a href="{{ url('admin/contributors') }}" class="waves-effect waves-dark">
+                        <span class="pcoded-micon"><i class="ti-user"></i><b>D</b></span>
+                        <span class="pcoded-mtext">Contributors</span>
+                        <span class="pcoded-mcaret"></span>
+                    </a>
+                </li>
                 <li class="{{ request()->is('admin/setting') ? 'active' : null }}">
                     <a href="{{ url('admin/setting') }}" class="waves-effect waves-dark">
                         <span class="pcoded-micon"><i class="ti-settings"></i><b>D</b></span>
