@@ -22,7 +22,7 @@ use Yajra\DataTables\Facades\DataTables;
 
 Route::get('/', function () {
     return view('index');
-});
+})->middleware('visitor');
 
 Route::get('/terms-conditions', function () {
     return view('terms_conditions');
