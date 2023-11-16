@@ -10,7 +10,7 @@
     <script type="text/javascript" src="https://unpkg.com/trix@2.0.0/dist/trix.umd.min.js"></script>
 
 
-    
+
 </head>
 
 <body>
@@ -116,20 +116,32 @@
                                                     <div class="row">
                                                         <div class="col-12">
                                                             <label for="field1">Words</label>
-                                                            <input type="text" id="field1" name="field1"
+                                                            <input type="text" id="field1" name="word"
                                                                 class="form-control">
+                                                                @error('word')
+                                                                <span class="text-danger"> {{$message}}</span>
+
+
+                                                                @enderror
                                                         </div>
                                                     </div>
 
                                                     <br>
                                                     <label for="field1">English Meaning</label>
-                                                    <input id="x" type="hidden" name="content">
-                                                    <trix-editor input="x"></trix-editor>
+                                                    <input id="english_meaning" type="hidden" name="english_meaning">
+                                                    <trix-editor input="english_meaning"></trix-editor>
+                                                    @error('english_meaning')
+                                                    <span class="text-danger"> {{$message}}</span>
+                                                    @enderror
 
                                                     <br>
                                                     <label for="field2">Nepali Meaning</label>
-                                                    <input id="x" type="hidden" name="content">
-                                                    <trix-editor input="x"></trix-editor>
+                                                    <input id="nepali_meaning" type="hidden" name="nepali_meaning">
+                                                    <trix-editor input="nepali_meaning"></trix-editor>
+                                                    @error('nepali_meaning')
+                                                    <span class="text-danger"> {{$message}}</span>
+
+                                                    @enderror
 
                                                 </div>
 

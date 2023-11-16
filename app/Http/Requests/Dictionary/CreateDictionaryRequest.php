@@ -3,6 +3,7 @@
 namespace App\Http\Requests\Dictionary;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class CreateDictionaryRequest extends FormRequest
 {
@@ -22,7 +23,9 @@ class CreateDictionaryRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'word'=>['required'],
+            'word'=>['required',Rule::unique('dictionaries','Words')],
+            'english_meaning'=>['required_without_all:nepali_meaning'],
+            'nepali_meaning'=>['required_without_all:english_meaning']
         ];
     }
 }
