@@ -3,7 +3,7 @@
 
 <head>
     @push('title')
-        <title>NH Nepali Meaning | Upload Meaning</title>
+        <title>NH Nepali Meaning | Contributors</title>
     @endpush
     @include('layouts.adminheader')
 
@@ -80,7 +80,7 @@
                                 <div class="row align-items-center">
                                     <div class="col-md-8">
                                         <div class="page-header-title">
-                                            <h5 class="m-b-10">Meaning/Upload</h5>
+                                            <h5 class="m-b-10">Contributors</h5>
                                             <p class="m-b-0">Welcome to NH Nepali Dictionary</p>
                                         </div>
                                     </div>
@@ -90,7 +90,7 @@
                                                 <a href="{{ url('admin/dashboard') }}"> <i class="fa fa-home"></i> </a>
                                             </li>
                                             <li class="breadcrumb-item"><a
-                                                    href="{{ url('admin/meaning/upload') }}">Upload</a>
+                                                    href="{{ url('admin/contributors') }}">Contributors</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -113,9 +113,9 @@
                                                 <thead class="bg-primary">
                                                     <tr>
                                                         <th>ID</th>
-                                                        <th>Words</th>
-                                                        <th style="width: 50%;">English Meaning</th>
-                                                        <th style="width: 50%;">Nepali Meaning</th>
+                                                        <th>Name</th>
+                                                        <th>Email</th>
+
 
 
                                                     </tr>
@@ -142,21 +142,19 @@
     <script>
         $(document).ready(function() {
             $('#table_data').DataTable({
-                "ajax": "/admin/dictionary",
+                "ajax": "/admin/contributors/ajax",
                 "processing": true,
 
                 "columns": [{
                         "data": "id"
                     },
                     {
-                        "data": "Words"
+                        "data": "name"
                     },
                     {
-                        "data": "Meaning"
+                        "data": "email"
                     },
-                    {
-                        "data": "nepali_meaning"
-                    },
+
 
                 ],
                 "dom": 'Bfrtip',

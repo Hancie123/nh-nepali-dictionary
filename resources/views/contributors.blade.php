@@ -18,7 +18,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-7 text-center mx-auto">
-                        <h1 class="text-white pt-3 mt-n5">Terms and Conditions</h1>
+                        <h1 class="text-white pt-3 mt-n5">Contributors</h1>
 
                     </div>
                 </div>
@@ -54,79 +54,35 @@
                     <section class="text-gray-600 body-font">
 
                         <div class="container py-5">
-                          <div class="row justify-content-center mb-5">
-                            <div class="col-12 text-center">
-                              <h1 class="h3 font-weight-bold">Our Team</h1>
-                              <p class="col-lg-6 mx-auto">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them.</p>
+                            <div class="row justify-content-center mb-5">
+                                <div class="col-12 text-center">
+                                    <h1 class="h3 font-weight-bold">Contributors</h1>
+                                    <p class="col-lg-6 mx-auto">NH Nepali Dictionary owes its richness and accuracy to
+                                        the dedicated contributions of a diverse group of contributors. Our heartfelt
+                                        appreciation goes to the individuals who have invested their time, knowledge,
+                                        and passion into making this dictionary a valuable resource for language
+                                        enthusiasts.</p>
+                                </div>
                             </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                              <div class="h-100 border p-4 rounded-lg text-center rounded">
-                                <img alt="team" class="w-25 h-25 bg-gray-100 rounded-circle mx-auto mb-3" src="https://dummyimage.com/80x80">
-                                <h2 class="h5 font-weight-medium">Holden Caulfield</h2>
-                                <p class="text-gray-500">UI Designer</p>
-                              </div>
+                            <div class="row">
+                                @foreach ($data as $datas)
+                                    <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                                        <div class="h-100 border p-4 rounded-lg text-center rounded">
+                                            <img alt="team"
+                                                class="w-25 h-35 bg-gray-100 rounded-circle mx-auto mb-3"
+                                                src="{{ $datas->getFirstMediaUrl('profile_image') }}">
+                                            <h2 class="h5 font-weight-medium">{{ $datas->name }}</h2>
+                                            <p class="text-gray-500"
+                                                style="white-space: normal; word-wrap: break-word;">{{ $datas->email }}
+                                            </p>
+                                        </div>
+                                    </div>
+                                @endforeach
+
+
                             </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                              <div class="h-100 border p-4 rounded-lg text-center">
-                                <img alt="team" class="w-25 h-25 bg-gray-100 rounded-circle mx-auto mb-3" src="https://dummyimage.com/84x84">
-                                <h2 class="h5 font-weight-medium">Henry Letham</h2>
-                                <p class="text-gray-500">CTO</p>
-                              </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                              <div class="h-100 border p-4 rounded-lg text-center">
-                                <img alt="team" class="w-25 h-25 bg-gray-100 rounded-circle mx-auto mb-3" src="https://dummyimage.com/88x88">
-                                <h2 class="h5 font-weight-medium">Oskar Blinde</h2>
-                                <p class="text-gray-500">Founder</p>
-                              </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                              <div class="h-100 border p-4 rounded-lg text-center">
-                                <img alt="team" class="w-25 h-25 bg-gray-100 rounded-circle mx-auto mb-3" src="https://dummyimage.com/90x90">
-                                <h2 class="h5 font-weight-medium">John Doe</h2>
-                                <p class="text-gray-500">DevOps</p>
-                              </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                              <div class="h-100 border p-4 rounded-lg text-center">
-                                <img alt="team" class="w-25 h-25 bg-gray-100 rounded-circle mx-auto mb-3" src="https://dummyimage.com/94x94">
-                                <h2 class="h5 font-weight-medium">Martin Eden</h2>
-                                <p class="text-gray-500">Software Engineer</p>
-                              </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                              <div class="h-100 border p-4 rounded-lg text-center">
-                                <img alt="team" class="w-25 h-25 bg-gray-100 rounded-circle mx-auto mb-3" src="https://dummyimage.com/98x98">
-                                <h2 class="h5 font-weight-medium">Boris Kitua</h2>
-                                <p class="text-gray-500">UX Researcher</p>
-                              </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                              <div class="h-100 border p-4 rounded-lg text-center">
-                                <img alt="team" class="w-25 h-25 bg-gray-100 rounded-circle mx-auto mb-3" src="https://dummyimage.com/100x90">
-                                <h2 class="h5 font-weight-medium">Atticus Finch</h2>
-                                <p class="text-gray-500">QA Engineer</p>
-                              </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                              <div class="h-100 border p-4 rounded-lg text-center">
-                                <img alt="team" class="w-25 h-25 bg-gray-100 rounded-circle mx-auto mb-3" src="https://dummyimage.com/104x94">
-                                <h2 class="h5 font-weight-medium">Alper Kamu</h2>
-                                <p class="text-gray-500">System</p>
-                              </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                              <div class="h-100 border p-4 rounded-lg text-center">
-                                <img alt="team" class="w-25 h-25 bg-gray-100 rounded-circle mx-auto mb-3" src="https://dummyimage.com/108x98">
-                                <h2 class="h5 font-weight-medium">Rodrigo Monchi</h2>
-                                <p class="text-gray-500">Product Manager</p>
-                              </div>
-                            </div>
-                          </div>
                         </div>
-                      </section>
+                    </section>
 
 
 
@@ -137,7 +93,7 @@
 
 
 
-@include('layouts/footer')
+    @include('layouts/footer')
 </body>
 
 </html>
