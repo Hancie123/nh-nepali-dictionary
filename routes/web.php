@@ -46,5 +46,6 @@ Route::group(['middleware'=>'auth:web'], function () {
 
 
     Route::get('admin/meaning/upload',[DictionaryController::class,'index']);
+    Route::get('admin/dictionary',[DictionaryController::class,'getDictionaryData']);
     Route::post('admin/meaning/upload',[DictionaryController::class,'store']);
 });

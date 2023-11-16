@@ -6,8 +6,7 @@
         <title>NH Nepali Meaning | Upload Meaning</title>
     @endpush
     @include('layouts.adminheader')
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.0/dist/trix.css">
-    <script type="text/javascript" src="https://unpkg.com/trix@2.0.0/dist/trix.umd.min.js"></script>
+
 </head>
 
 <body>
@@ -108,12 +107,22 @@
 
 
                                         <div class="container">
-                                            <div class="card">
-                                                <div class="card-header">Manage Users</div>
-                                                <div class="card-body">
-                                                    {{ $dataTable->table() }}
-                                                </div>
-                                            </div>
+                                            <table
+                                                class="table table-hover table-stripedtext-light"
+                                                id="table_data">
+                                                <thead class="bg-primary">
+                                                    <tr>
+                                                        <th>ID</th>
+                                                        <th>Words</th>
+                                                        <th style="width: 50%;">English Meaning</th>
+                                                        <th style="width: 50%;">Nepali Meaning</th>
+
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                </tbody>
+                                            </table>
                                         </div>
 
 
@@ -130,13 +139,58 @@
         </div>
     </div>
 
+    <script>
+        $(document).ready(function() {
+            $('#table_data').DataTable({
+                "processing": true,
+                "ajax": "/admin/dictionary",
+
+                "columns": [{
+                        "data": "id"
+                    },
+                    {
+                        "data": "Words"
+                    },
+                    {
+                        "data": "Meaning"
+                    },
+                    {
+                        "data": "nepali_meaning"
+                    },
+
+                ],
+                "dom": 'Bfrtip',
+                "buttons": [{
+                        "extend": 'copyHtml5',
+                        "title": 'Dictionary Data'
+                    },
+                    {
+                        "extend": 'excelHtml5',
+                        "title": 'Dictionary Data'
+                    },
+                    {
+                        "extend": 'csvHtml5',
+                        "title": 'Dictionary Data'
+                    },
+                    {
+                        "extend": 'pdfHtml5',
+                        "title": 'Dictionary Data'
+                    },
+                    {
+                        "extend": 'print',
+                        "title": 'Print'
+                    }
+                ]
+            });
+        });
+    </script>
+
 
     @include('layouts.adminfooter')
 
-    @push('scripts')
-    {{ $dataTable->scripts() }}
-    
-@endpush
+
+
+
 </body>
 
 </html>
