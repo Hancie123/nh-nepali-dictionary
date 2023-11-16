@@ -126,7 +126,7 @@
                                                                 <div class="row align-items-center text-center">
                                                                     <div class="col-4 p-r-0">
 
-                                                                        <i class="bx bx-donate-heart text-c-green f-24"></i>
+                                                                        <i class="bx bx-donate-heart bx-md text-c-green f-24"></i>
                                                                     </div>
                                                                     <div class="col-8 p-l-0">
                                                                         <h5>{{$data['countContributors']}}</h5>
@@ -169,11 +169,12 @@
                                                             <div class="col-sm-6 b-r-default p-b-20 p-t-20">
                                                                 <div class="row align-items-center text-center">
                                                                     <div class="col-4 p-r-0">
-                                                                        <i class="fas fa-share-alt text-c-purple f-24"></i>
+
+                                                                        <i class="bx bx-desktop bx-md text-c-purple f-24"></i>
                                                                     </div>
                                                                     <div class="col-8 p-l-0">
-                                                                        <h5>1000</h5>
-                                                                        <p class="text-muted m-b-0">Share</p>
+                                                                        <h5 id="displaySize"></h5>
+                                                                        <p class="text-muted m-b-0">Display Size</p>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -183,8 +184,8 @@
                                                                         <i class="fas fa-sitemap text-c-green f-24"></i>
                                                                     </div>
                                                                     <div class="col-8 p-l-0">
-                                                                        <h5>600</h5>
-                                                                        <p class="text-muted m-b-0">Network</p>
+                                                                        <h5 id="systemName"></h5>
+                                                                        <p class="text-muted m-b-0">OS</p>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -193,11 +194,12 @@
                                                             <div class="col-sm-6 p-b-20 p-t-20 b-r-default">
                                                                 <div class="row align-items-center text-center">
                                                                     <div class="col-4 p-r-0">
-                                                                        <i class="fas fa-signal text-c-red f-24"></i>
+
+                                                                        <i class="bx bx-devices bx-md text-c-red f-24"></i>
                                                                     </div>
                                                                     <div class="col-8 p-l-0">
-                                                                        <h5>350</h5>
-                                                                        <p class="text-muted m-b-0">Returns</p>
+                                                                        <h5 id="deviceType"></h5>
+                                                                        <p class="text-muted m-b-0">Device Type</p>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -207,7 +209,7 @@
                                                                         <i class="fas fa-wifi text-c-blue f-24"></i>
                                                                     </div>
                                                                     <div class="col-8 p-l-0">
-                                                                        <h5>100%</h5>
+                                                                        <h5 id="onlineStatus">10%</h5>
                                                                         <p class="text-muted m-b-0">Connections</p>
                                                                     </div>
                                                                 </div>
@@ -450,6 +452,66 @@
             </div>
         </div>
     </div>
+
+    <script>
+       function updateOnlineStatus() {
+            var onlineStatus = navigator.onLine ? 'Online' : 'Offline';
+            document.getElementById('onlineStatus').innerText = onlineStatus;
+        }
+
+        // Initial update
+        updateOnlineStatus();
+
+        // Listen for online/offline events
+        window.addEventListener('online', updateOnlineStatus);
+        window.addEventListener('offline', updateOnlineStatus);
+
+        function getDeviceType() {
+            var userAgent = navigator.userAgent;
+
+            if (/Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile/.test(userAgent)) {
+                return 'Mobile';
+            } else if (/iPad|Tablet/.test(userAgent)) {
+                return 'Tablet';
+            } else {
+                return 'Desktop';
+            }
+        }
+
+        // Update device type
+        document.getElementById('deviceType').innerText = getDeviceType();
+
+
+        function getOperatingSystemName() {
+            var platform = navigator.platform.toLowerCase();
+
+            if (platform.includes('win')) {
+                return 'Windows';
+            } else if (platform.includes('mac')) {
+                return 'Mac OS';
+            } else if (platform.includes('linux')) {
+                return 'Linux';
+            } else if (platform.includes('android')) {
+                return 'Android';
+            } else {
+                return 'Unknown OS';
+            }
+        }
+
+        // Update operating system name
+        document.getElementById('systemName').innerText = getOperatingSystemName();
+
+
+        function getDisplaySize() {
+            var screenWidth = window.screen.width;
+            var screenHeight = window.screen.height;
+
+            return screenWidth + 'x' + screenHeight;
+        }
+
+        // Update the display size
+        document.getElementById('displaySize').innerText = getDisplaySize();
+    </script>
 
 
    @include('layouts.adminfooter')
