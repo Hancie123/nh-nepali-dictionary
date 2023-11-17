@@ -61,6 +61,7 @@
                             </div>
                         </li>
                         @empty
+                        <li>No notification</li>
 
                         @endforelse
 
