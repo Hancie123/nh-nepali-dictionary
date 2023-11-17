@@ -34,7 +34,7 @@
                                         <a href="{{url('about-us')}}" class="dropdown-item border-radius-md">
                                             <span class="ps-3">About Us</span>
                                         </a>
-                                        <a href="./pages/contact-us.html" class="dropdown-item border-radius-md">
+                                        <a href="{{url('/contact-us')}}" class="dropdown-item border-radius-md">
                                             <span class="ps-3">Contact Us</span>
                                         </a>
                                         <a href="./pages/author.html" class="dropdown-item border-radius-md">
