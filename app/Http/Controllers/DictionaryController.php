@@ -44,6 +44,13 @@ class DictionaryController extends Controller
                     'user_id'=>auth()->user()->id,
 
                 ]);
+
+                Notification::create([
+                    'title'=>"$request->word new word is added.",
+                    'category'=>'Dictionary',
+                    'message'=>"Word is added successfully to dictionary database",
+
+                ]);
                 return $dictionary;
 
             });

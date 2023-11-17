@@ -26,7 +26,7 @@ class NotificationController extends Controller
         $categoryNotifications = collect();
 
         foreach ($maxIdNotifications as $notification) {
-            $notificationsForCategory = Notification::where('category', $notification->category)->get();
+            $notificationsForCategory = Notification::where('category', $notification->category)->latest()->get();
             $categoryNotifications->push($notificationsForCategory);
         }
 
