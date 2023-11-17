@@ -7,6 +7,7 @@ use App\Http\Controllers\DeveloperController;
 use App\Http\Controllers\DictionaryController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\SettingController;
+use App\Http\Controllers\VisitorLogController;
 use Illuminate\Support\Facades\Route;
 use Yajra\DataTables\Facades\DataTables;
 
@@ -56,4 +57,7 @@ Route::group(['middleware'=>'auth:web'], function () {
 
     Route::get('admin/contributors',[ContributorController::class,'index']);
     Route::get('admin/contributors/ajax',[ContributorController::class,'getDataAjax']);
+
+    Route::get('admin/visitor-log',[VisitorLogController::class,'index']);
+    Route::get('admin/visitor-log/ajax',[VisitorLogController::class,'getDataAjax']);
 });
