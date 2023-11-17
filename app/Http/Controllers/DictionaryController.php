@@ -6,6 +6,7 @@ use App\DataTables\DictionariesDataTable;
 use App\DataTables\DictionaryDataTable;
 use App\Http\Requests\Dictionary\CreateDictionaryRequest;
 use App\Models\Dictionary;
+use App\Models\Notification;
 use App\Models\UserAddedMeaning;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -14,12 +15,13 @@ class DictionaryController extends Controller
 {
 
     public function index(){
-        return view('admin.dictionary-upload-meanings');
+        $notification=Notification::latest()->get();
+        return view('admin.dictionary-upload-meanings',compact('notification'));
     }
 
     public function dictionaryManagement(){
-
-        return view('admin.dictionary_management');
+        $notification=Notification::latest()->get();
+        return view('admin.dictionary_management',compact('notification'));
     }
 
     public function getDictionaryData(){

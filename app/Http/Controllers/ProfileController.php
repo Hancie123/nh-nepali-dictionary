@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Notification;
 use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
     public function index(){
-        return view('admin.profile');
+        $notification=Notification::latest()->get();
+        return view('admin.profile',compact('notification'));
     }
 }
