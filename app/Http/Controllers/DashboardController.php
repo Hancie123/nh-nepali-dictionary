@@ -25,7 +25,7 @@ class DashboardController extends Controller
             )
                 ->groupBy('device_type', 'device_browser', 'device_os')
                 ->orderByDesc('device_count')
-                ->get(),
+                ->paginate(4),
         ];
 
         return view('admin/dashboard', compact('data'));
