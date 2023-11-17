@@ -15,12 +15,12 @@ class DictionaryController extends Controller
 {
 
     public function index(){
-        $notification=Notification::latest()->get();
+        $notification=Notification::latest()->limit(5)->get();
         return view('admin.dictionary-upload-meanings',compact('notification'));
     }
 
     public function dictionaryManagement(){
-        $notification=Notification::latest()->get();
+        $notification=Notification::latest()->limit(5)->get();
         return view('admin.dictionary_management',compact('notification'));
     }
 

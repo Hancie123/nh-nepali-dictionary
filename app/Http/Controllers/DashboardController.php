@@ -30,7 +30,7 @@ class DashboardController extends Controller
 
 
         ];
-        $notification=Notification::latest()->get();
+        $notification=Notification::latest()->limit(5)->get();
 
         return view('admin/dashboard', compact('data','notification'));
     }

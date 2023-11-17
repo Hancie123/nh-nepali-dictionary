@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class VisitorLogController extends Controller
 {
     public function index(){
-        $notification=Notification::latest()->get();
+        $notification=Notification::latest()->limit(5)->get();
         return view('admin.visitor_log',compact('notification'));
     }
 
