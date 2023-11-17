@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Models\ContactUs as ModelsContactUs;
+use App\Models\Notification;
 use Livewire\Attributes\Rule;
 
 use Livewire\Component;
@@ -22,7 +23,15 @@ class ContactUs extends Component
 {
     ModelsContactUs::create(
         $this->validate()
+
+
     );
+    Notification::create([
+        'title'=>$this->name,
+        'category'=>'Contact Us',
+        'message'=>$this->message,
+
+    ]);
     sweetalert()->addSuccess('Contact has been send successfully!');
     return $this->redirect('/contact-us');
 }

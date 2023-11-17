@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Contributor;
 use App\Models\Dictionary;
+use App\Models\Notification;
 use App\Models\VisitorLog;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -26,8 +27,11 @@ class DashboardController extends Controller
                 ->groupBy('device_type', 'device_browser', 'device_os')
                 ->orderByDesc('device_count')
                 ->paginate(4),
-        ];
 
-        return view('admin/dashboard', compact('data'));
+
+        ];
+        $notification=Notification::latest()->get();
+
+        return view('admin/dashboard', compact('data','notification'));
     }
 }
