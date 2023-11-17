@@ -3,6 +3,7 @@
 use App\Http\Controllers\ContributorController;
 use App\Http\Controllers\Dashboard;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DeveloperController;
 use App\Http\Controllers\DictionaryController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\SettingController;
@@ -37,6 +38,7 @@ Route::get('/contact-us', function () {
 });
 
 Route::get('/contributors',[ContributorController::class,'publicIndex']);
+Route::get('/developers',[DeveloperController::class,'index']);
 
 Route::get('/admin/login', [LoginController::class, 'index'])->name('admin.login');
 Route::post('/admin/login', [LoginController::class, 'store']);
