@@ -4,10 +4,10 @@
 <head>
     @push('title')
         <title>NH Nepali Meaning | Upload Meaning</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     @endpush
     @include('layouts.adminheader')
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.0/dist/trix.css">
-    <script type="text/javascript" src="https://unpkg.com/trix@2.0.0/dist/trix.umd.min.js"></script>
+
 
 
 
@@ -117,30 +117,25 @@
                                                         <div class="col-12">
                                                             <label for="field1">Words</label>
                                                             <input type="text" id="field1" name="word"
-                                                                class="form-control">
-                                                                @error('word')
-                                                                <span class="text-danger"> {{$message}}</span>
-
-
-                                                                @enderror
+                                                                class="form-control form-control-primary rounded">
+                                                            @error('word')
+                                                                <span class="text-danger"> {{ $message }}</span>
+                                                            @enderror
                                                         </div>
                                                     </div>
 
                                                     <br>
                                                     <label for="field1">English Meaning</label>
-                                                    <input id="english_meaning" type="hidden" name="english_meaning">
-                                                    <trix-editor input="english_meaning"></trix-editor>
+                                                    <textarea id="english_meaning" class="form-control form-control-primary rounded" name="english_meaning" style="height: 100px;"></textarea>
                                                     @error('english_meaning')
-                                                    <span class="text-danger"> {{$message}}</span>
+                                                        <span class="text-danger"> {{ $message }}</span>
                                                     @enderror
 
                                                     <br>
                                                     <label for="field2">Nepali Meaning</label>
-                                                    <input id="nepali_meaning" type="hidden" name="nepali_meaning">
-                                                    <trix-editor input="nepali_meaning"></trix-editor>
+                                                    <textarea id="nepali_meaning" class="form-control form-control-primary rounded" name="nepali_meaning" style="height: 100px;"></textarea>
                                                     @error('nepali_meaning')
-                                                    <span class="text-danger"> {{$message}}</span>
-
+                                                        <span class="text-danger"> {{ $message }}</span>
                                                     @enderror
 
                                                 </div>
@@ -157,12 +152,7 @@
 
                                             </form>
                                         </div>
-                                        <style>
-                                            trix-editor {
-                                                min-height: 100px;
-                                                /* Adjust the height as needed */
-                                            }
-                                        </style>
+
 
 
 
