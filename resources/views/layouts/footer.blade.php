@@ -17,20 +17,14 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link pe-1" href="https://twitter.com/creativetim" target="_blank">
+                            <a class="nav-link pe-1" href="https://twitter.com/hancie_phago" target="_blank">
                                 <i class="fab fa-twitter text-lg opacity-8"></i>
                             </a>
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link pe-1" href="https://dribbble.com/creativetim" target="_blank">
-                                <i class="fab fa-dribbble text-lg opacity-8"></i>
-                            </a>
-                        </li>
-
 
                         <li class="nav-item">
-                            <a class="nav-link pe-1" href="https://github.com/creativetimofficial"
+                            <a class="nav-link pe-1" href="https://github.com/Hancie123"
                                 target="_blank">
                                 <i class="fab fa-github text-lg opacity-8"></i>
                             </a>
@@ -38,7 +32,7 @@
 
                         <li class="nav-item">
                             <a class="nav-link pe-1"
-                                href="https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w" target="_blank">
+                                href="https://www.youtube.com/@hanciephago8401" target="_blank">
                                 <i class="fab fa-youtube text-lg opacity-8"></i>
                             </a>
                         </li>
@@ -86,21 +80,21 @@
                     <h6 class="text-gradient text-primary text-sm">Social</h6>
                     <ul class="flex-column ms-n3 nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="https://iradesign.io/" target="_blank">
-                                Illustrations
+                            <a class="nav-link" href="https://www.facebook.com/hanciephago720" target="_blank">
+                                Facebook
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="https://www.creative-tim.com/bits" target="_blank">
-                                Bits & Snippets
+                            <a class="nav-link" href="https://www.instagram.com/hancie720/" target="_blank">
+                                Instagram
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="https://www.creative-tim.com/affiliates/new"
+                            <a class="nav-link" href="https://www.youtube.com/@hanciephago8401"
                                 target="_blank">
-                                Affiliate Program
+                                Youtube
                             </a>
                         </li>
                     </ul>
