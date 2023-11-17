@@ -24,7 +24,7 @@ class DashboardController extends Controller
                 DB::raw('COUNT(*) as device_count')
             )
                 ->groupBy('device_type', 'device_browser', 'device_os')
-                ->orderByDesc('device_count')->limit(5)
+                ->orderByDesc('device_count')
                 ->get(),
         ];
 
