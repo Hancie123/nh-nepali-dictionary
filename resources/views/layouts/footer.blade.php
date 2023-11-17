@@ -53,21 +53,21 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="https://www.creative-tim.com/templates/free"
+                            <a class="nav-link" href="#"
                                 target="_blank">
                                 Tech Revo
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="https://www.creative-tim.com/templates/premium"
+                            <a class="nav-link" href="#"
                                 target="_blank">
                                 Tools
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="https://www.creative-tim.com/blog" target="_blank">
+                            <a class="nav-link" href="#" target="_blank">
                                 Blog
                             </a>
                         </li>
@@ -106,27 +106,27 @@
                     <h6 class="text-gradient text-primary text-sm">Help & Support</h6>
                     <ul class="flex-column ms-n3 nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="https://www.creative-tim.com/contact-us" target="_blank">
+                            <a class="nav-link" href="{{url('/contact-us')}}">
                                 Contact Us
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="https://www.creative-tim.com/knowledge-center"
+                            <a class="nav-link" href="#"
                                 target="_blank">
                                 Knowledge Center
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="https://services.creative-tim.com/?ref=ct-soft-ui-footer"
+                            <a class="nav-link" href="#"
                                 target="_blank">
                                 Custom Development
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="https://www.creative-tim.com/sponsorships" target="_blank">
+                            <a class="nav-link" href="#" target="_blank">
                                 Sponsorships
                             </a>
                         </li>
@@ -146,13 +146,13 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="https://www.creative-tim.com/privacy" target="_blank">
+                            <a class="nav-link" href="#" target="_blank">
                                 Privacy Policy
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="https://www.creative-tim.com/license" target="_blank">
+                            <a class="nav-link" href="#" target="_blank">
                                 Licenses (EULA)
                             </a>
                         </li>

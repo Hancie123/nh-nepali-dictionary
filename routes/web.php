@@ -32,6 +32,10 @@ Route::get('/about-us', function () {
     return view('about_us');
 });
 
+Route::get('/contact-us', function () {
+    return view('contact_us');
+});
+
 Route::get('/contributors',[ContributorController::class,'publicIndex']);
 
 Route::get('/admin/login', [LoginController::class, 'index'])->name('admin.login');
