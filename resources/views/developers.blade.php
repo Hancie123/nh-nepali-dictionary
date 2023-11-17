@@ -18,7 +18,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-7 text-center mx-auto">
-                        <h1 class="text-white pt-3 mt-n5">Contributors</h1>
+                        <h1 class="text-white pt-3 mt-n5">Developers</h1>
 
                     </div>
                 </div>
@@ -56,12 +56,11 @@
                         <div class="container py-5">
                             <div class="row justify-content-center mb-5">
                                 <div class="col-12 text-center">
-                                    <h1 class="h3 font-weight-bold">Contributors</h1>
-                                    <p class="col-lg-6 mx-auto text-dark">NH Nepali Dictionary owes its richness and accuracy to
-                                        the dedicated contributions of a diverse group of contributors. Our heartfelt
-                                        appreciation goes to the individuals who have invested their time, knowledge,
-                                        and passion into making this dictionary a valuable resource for language
-                                        enthusiasts.</p>
+                                    <h1 class="h3 font-weight-bold">Developers</h1>
+                                    <p class="col-lg-6 mx-auto text-dark">Curious about the brains behind NH Nepali
+                                        Dictionary? Our talented team of developers is dedicated to bringing
+                                        you the best language-learning experience. Get to know the minds
+                                        shaping the app:</p>
                                 </div>
                             </div>
                             <div class="row">

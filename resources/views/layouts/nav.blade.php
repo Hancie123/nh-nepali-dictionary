@@ -37,11 +37,12 @@
                                         <a href="{{url('/contact-us')}}" class="dropdown-item border-radius-md">
                                             <span class="ps-3">Contact Us</span>
                                         </a>
-                                        <a href="./pages/author.html" class="dropdown-item border-radius-md">
-                                            <span class="ps-3">Author</span>
-                                        </a>
+
                                         <a href="{{url('contributors')}}" class="dropdown-item border-radius-md">
                                             <span class="ps-3">Contributors</span>
+                                        </a>
+                                        <a href="{{url('developers')}}" class="dropdown-item border-radius-md">
+                                            <span class="ps-3">Developers</span>
                                         </a>
                                         <a href="{{url('/admin/login')}}" class="dropdown-item border-radius-md">
                                             <span class="ps-3">Admin Account</span>
@@ -57,11 +58,12 @@
                                         <a href="./pages/contact-us.html" class="dropdown-item border-radius-md">
                                             <span class="ps-3">Contact Us</span>
                                         </a>
-                                        <a href="./pages/author.html" class="dropdown-item border-radius-md">
-                                            <span class="ps-3">Author</span>
-                                        </a>
+
                                         <a href="{{url('contributors')}}" class="dropdown-item border-radius-md">
                                             <span class="ps-3">Contributors</span>
+                                        </a>
+                                        <a href="{{url('developers')}}" class="dropdown-item border-radius-md">
+                                            <span class="ps-3">Developers</span>
                                         </a>
                                         <a href="{{url('/admin/login')}}" class="dropdown-item border-radius-md">
                                             <span class="ps-3">Admin Account</span>
