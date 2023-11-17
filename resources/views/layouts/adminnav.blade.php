@@ -49,6 +49,7 @@
                             <label class="label label-danger">New</label>
                         </li>
                         @forelse ($notification as $data)
+                        <a href="{{url('admin/notification')}}">
                         <li class="waves-effect waves-light">
                             <div class="media">
                                 <img class="d-flex align-self-center img-radius"
@@ -60,6 +61,7 @@
                                 </div>
                             </div>
                         </li>
+                    </a>
                         @empty
                         <li>No notification</li>
 
