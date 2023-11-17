@@ -100,7 +100,7 @@
                             </a>
                         </li>
                         <li class="waves-effect waves-light">
-                            <a href="user-profile.html">
+                            <a href="{{url('admin/profile')}}">
                                 <i class="ti-user"></i> Profile
                             </a>
                         </li>

@@ -6,6 +6,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DeveloperController;
 use App\Http\Controllers\DictionaryController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\VisitorLogController;
 use Illuminate\Support\Facades\Route;
@@ -60,4 +61,5 @@ Route::group(['middleware'=>'auth:web'], function () {
 
     Route::get('admin/visitor-log',[VisitorLogController::class,'index']);
     Route::get('admin/visitor-log/ajax',[VisitorLogController::class,'getDataAjax']);
+    Route::get('admin/profile',[ProfileController::class,'index']);
 });
