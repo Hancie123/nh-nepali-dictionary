@@ -36,7 +36,9 @@ class LoginController extends Controller
                     sweetalert()->addSuccess('Welcome'. $user->name);
                     return redirect('/admin/dashboard');
 
-                } elseif ($user->status == 'admin') {
+                } elseif ($user->status == 'developer') {
+                    sweetalert()->addSuccess('Welcome'. $user->name);
+                    return redirect('/admin/dashboard');
                 }
             } else {
                 sweetalert()->addWarning('Invalid Credentials');
