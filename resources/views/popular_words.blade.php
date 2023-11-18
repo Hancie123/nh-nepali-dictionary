@@ -52,12 +52,15 @@
 
 
                     <div class="list-group d-block mx-auto mt-4" style="max-width: 50%">
-                        <p class="text-dark">Today's popular words</p>
-                        @foreach ($todayPopular as $dictionary)
+                        <p class="text-dark text-center">Today's searched words</p>
+                        @forelse ($todayPopular as $dictionary)
                         <a href="#" class="list-group-item list-group-item-action">{{ $dictionary['Words'] }}</a>
-                        @endforeach
+                        @empty
+                        <a href="#" class="list-group-item list-group-item-action">No searched word today</a>
+                        @endforelse
 
                     </div>
+
 
 
 
