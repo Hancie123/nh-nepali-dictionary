@@ -18,7 +18,7 @@
                 </div>
             </div>
             <a href="index.html">
-                <h5 class="">NH Dictionary</h5>
+                <img class="d-block mx-auto" src="{{ url('assets/img/white logo.png') }}" alt="logo.png" style="width:11rem;">
             </a>
             <a class="mobile-options waves-effect waves-light">
                 <i class="ti-more"></i>
