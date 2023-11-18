@@ -114,8 +114,6 @@
                                                     <input type="text" class="form-control" name="app_name" />
                                                 @endif
 
-
-
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label>App Slogan</label>

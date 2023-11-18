@@ -24,6 +24,14 @@ class DictionaryController extends Controller
         return view('admin.dictionary_management',compact('notification'));
     }
 
+
+    public function popularWords(){
+
+        $todayPopular=Dictionary::popularToday()->get();
+
+        return view('popular_words',compact('todayPopular'));
+    }
+
     public function getDictionaryData(){
         $dictionary=Dictionary::latest()->get();
         return response()->json(['data'=>$dictionary]);
