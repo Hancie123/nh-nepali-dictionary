@@ -28,8 +28,10 @@ class DictionaryController extends Controller
     public function popularWords(){
 
         $todayPopular=Dictionary::popularToday()->get();
+        $pouplarThisWeek=Dictionary::popularThisWeek()->get();
+        $popularThisMonth=Dictionary::popularThisMonth()->get();
 
-        return view('popular_words',compact('todayPopular'));
+        return view('popular_words',compact('todayPopular','pouplarThisWeek','popularThisMonth'));
     }
 
     public function getDictionaryData(){
