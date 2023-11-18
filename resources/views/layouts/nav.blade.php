@@ -87,7 +87,7 @@
                                     aria-labelledby="dropdownMenuPages">
                                     <div class="d-none d-lg-block">
 
-                                        <a href="{{url('about-us')}}" class="dropdown-item border-radius-md">
+                                        <a href="{{url('/popular-words')}}" class="dropdown-item border-radius-md">
                                             <span class="ps-3">Popular Words</span>
                                         </a>
                                         <a href="{{url('about-us')}}" class="dropdown-item border-radius-md">

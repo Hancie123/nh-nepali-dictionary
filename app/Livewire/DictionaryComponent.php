@@ -33,6 +33,8 @@ class DictionaryComponent extends Component
         if ($dictionaryEntry) {
             $this->definition = $dictionaryEntry->Meaning;
             $this->nepaliMeaning = $dictionaryEntry->nepali_meaning;
+
+            $dictionaryEntry->visit()->withData(['word' => $this->word])->withUser()->withIp();
         } else {
             $this->definition = 'Word not found in the dictionary.';
             $this->nepaliMeaning=null;

@@ -48,6 +48,8 @@ Route::get('/developers',[DeveloperController::class,'index']);
 Route::get('/admin/login', [LoginController::class, 'index'])->name('admin.login');
 Route::post('/admin/login', [LoginController::class, 'store']);
 
+Route::get('/popular-words',[DictionaryController::class,'popularWords']);
+
 Route::get('/complete_registration',[DeveloperController::class,'setPasswordIndex']);
 Route::post('/complete_registration',[DeveloperController::class,'setNewUserPassword']);
 
