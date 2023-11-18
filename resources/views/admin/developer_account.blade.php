@@ -127,15 +127,16 @@
 
                                                         <!-- Modal body -->
                                                         <div class="modal-body">
-                                                            <form action="{{url('admin/users/developers')}}" method="post">
+                                                            <form action="{{ url('admin/users/developers') }}"
+                                                                method="post" enctype="multipart/form-data">
                                                                 @csrf
                                                                 <div class="row">
                                                                     <div class="col-md-6">
                                                                         <label for="name"
                                                                             class="form-label">Name:</label>
                                                                         <input type="name" class="form-control"
-                                                                            id="name"
-                                                                            placeholder="Enter name" name="name">
+                                                                            id="name" placeholder="Enter name"
+                                                                            name="name">
                                                                         @error('name')
                                                                             <span
                                                                                 class="text-danger">{{ $message }}</span>
@@ -146,8 +147,8 @@
                                                                         <label for="email"
                                                                             class="form-label">Email:</label>
                                                                         <input type="email" class="form-control"
-                                                                            id="email"
-                                                                            placeholder="Enter email" name="email">
+                                                                            id="email" placeholder="Enter email"
+                                                                            name="email">
                                                                         @error('email')
                                                                             <span
                                                                                 class="text-danger">{{ $message }}</span>
@@ -155,9 +156,29 @@
 
                                                                     </div>
 
+                                                                </div><br>
+
+                                                                <div class="row">
+                                                                    <div class="col-md-6">
+                                                                        <label for="profile_image"
+                                                                            class="form-label">Profile Image:</label>
+                                                                        <input type="file" class="form-control"
+                                                                            id="profile_image" placeholder="Enter name"
+                                                                            name="profile_image">
+                                                                        @error('profile_image')
+                                                                            <span
+                                                                                class="text-danger">{{ $message }}</span>
+                                                                        @enderror
+
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                    </div>
                                                                 </div>
+
+
                                                                 <button type="submit"
-                                                                    class="btn btn-primary mt-3">Create Account</button>
+                                                                    class="btn btn-primary mt-3">Create
+                                                                    Account</button>
 
                                                             </form>
 
@@ -265,7 +286,7 @@
 
                             $('#table_data').DataTable().ajax.reload();
                         } else {
-                            
+
                         }
                     },
                     error: function(xhr, status, error) {
@@ -274,7 +295,6 @@
                 });
             }
         }
-
     </script>
 
 
