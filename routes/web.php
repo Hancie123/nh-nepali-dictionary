@@ -47,6 +47,9 @@ Route::get('/developers',[DeveloperController::class,'index']);
 Route::get('/admin/login', [LoginController::class, 'index'])->name('admin.login');
 Route::post('/admin/login', [LoginController::class, 'store']);
 
+Route::get('/complete_registration',[DeveloperController::class,'setPasswordIndex']);
+Route::post('/complete_registration',[DeveloperController::class,'setNewUserPassword']);
+
 Route::group(['middleware'=>'auth:web'], function () {
     Route::get('/admin/dashboard', [DashboardController::class, 'index']);
     Route::get('/admin/setting', [SettingController::class, 'index']);
@@ -70,4 +73,7 @@ Route::group(['middleware'=>'auth:web'], function () {
     Route::post('admin/users/developers',[DeveloperController::class,'save']);
     Route::get('admin/users/developers/delete/{id}',[DeveloperController::class,'deleteUser']);
     Route::get('/admin/users/developers/ajax',[DeveloperController::class,'developerUserDataAjax']);
+
+
+
 });
