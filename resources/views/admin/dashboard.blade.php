@@ -155,8 +155,8 @@
                                                                             class="far fa-envelope-open text-c-blue f-24"></i>
                                                                     </div>
                                                                     <div class="col-8 p-l-0">
-                                                                        <h5>120</h5>
-                                                                        <p class="text-muted m-b-0">Mails</p>
+                                                                        <h5>{{$data['contact']}}</h5>
+                                                                        <p class="text-muted m-b-0">Messages</p>
                                                                     </div>
                                                                 </div>
                                                             </div>

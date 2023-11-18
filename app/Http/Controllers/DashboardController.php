@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ContactUs;
 use App\Models\Contributor;
 use App\Models\Dictionary;
 use App\Models\Notification;
@@ -27,6 +28,8 @@ class DashboardController extends Controller
                 ->groupBy('device_type', 'device_browser', 'device_os')
                 ->orderByDesc('device_count')
                 ->paginate(4),
+
+            'contact'=>ContactUs::count(),
 
 
         ];
