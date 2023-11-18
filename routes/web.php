@@ -9,6 +9,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SettingController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\VisitorLogController;
 use Illuminate\Support\Facades\Route;
 use Yajra\DataTables\Facades\DataTables;
@@ -64,4 +65,9 @@ Route::group(['middleware'=>'auth:web'], function () {
     Route::get('admin/visitor-log/ajax',[VisitorLogController::class,'getDataAjax']);
     Route::get('admin/profile',[ProfileController::class,'index']);
     Route::get('admin/notification',[NotificationController::class,'index']);
+
+    Route::get('admin/users/developers',[DeveloperController::class,'adminIndex']);
+    Route::post('admin/users/developers',[DeveloperController::class,'save']);
+    Route::get('admin/users/developers/delete/{id}',[DeveloperController::class,'deleteUser']);
+    Route::get('/admin/users/developers/ajax',[DeveloperController::class,'developerUserDataAjax']);
 });
