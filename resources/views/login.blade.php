@@ -20,6 +20,7 @@
     <link rel="stylesheet" type="text/css" href="{{ url('assets/css/icofont.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url('assets/css/font-awesome.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url('assets/css/style.css') }}">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 
 <body themebg-pattern="theme1">
@@ -78,7 +79,7 @@
     </div>
     <!-- Pre-loader end -->
 
-    <section class="login-block">
+    <section class="login-block w3-display-middle" style="width:500px;">
         <!-- Container-fluid starts -->
         <div class="container">
             <div class="row">
@@ -92,16 +93,14 @@
                     <form class="md-float-material form-material rounded" action="{{ url('/admin/login') }}"
                         method="post">
                         @csrf
-                        <div class="text-center">
-                            <img src="{{ url('assets/img/dictionarylogo.png') }}" alt="logo.png" style="width:250px;">
-                        </div>
+
                         <div class="auth-box card border shadow">
                             <div class="card-block">
                                 <div class="row m-b-20">
                                     <div class="col-md-12">
-                                        <h3 class="text-center">Sign In</h3>
+                                        <img class="d-block mx-auto" src="{{ url('assets/img/nh-nepali-dictionary-high-resolution-logo-black-transparent.png') }}" alt="logo.png" style="width:350px;">
                                     </div>
-                                </div>
+                                </div><br>
                                 <div class="form-group form-primary">
                                     <input type="text" name="email" class="form-control">
                                     <span class="form-bar"></span>
@@ -145,8 +144,8 @@
                                 <div class="row">
                                     <div class="col-md-10">
                                         <p class="text-inverse text-left m-b-0">Thank you.</p>
-                                        <p class="text-inverse text-left"><a href="{{ url('/') }}"><b>Back to
-                                                    website</b></a></p>
+                                        <p class="text-inverse text-left"><a href="{{ url('/') }}">Back to
+                                                    website</a></p>
                                     </div>
 
                                 </div>
