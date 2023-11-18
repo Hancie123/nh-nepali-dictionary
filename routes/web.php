@@ -9,6 +9,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SettingController;
+use App\Http\Controllers\SiteSettingController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\VisitorLogController;
 use Illuminate\Support\Facades\Route;
@@ -52,7 +53,6 @@ Route::post('/complete_registration',[DeveloperController::class,'setNewUserPass
 
 Route::group(['middleware'=>'auth:web'], function () {
     Route::get('/admin/dashboard', [DashboardController::class, 'index']);
-    Route::get('/admin/setting', [SettingController::class, 'index']);
     Route::get('/logout', [LoginController::class, 'logout']);
     Route::get('admin/meaning/management',[DictionaryController::class,'dictionaryManagement'])->name('admin.dictionary_management');
 
@@ -73,6 +73,9 @@ Route::group(['middleware'=>'auth:web'], function () {
     Route::post('admin/users/developers',[DeveloperController::class,'save']);
     Route::get('admin/users/developers/delete/{id}',[DeveloperController::class,'deleteUser']);
     Route::get('/admin/users/developers/ajax',[DeveloperController::class,'developerUserDataAjax']);
+
+    Route::get('/admin/setting', [SettingController::class, 'index']);
+    Route::post('/admin/setting',[SiteSettingController::class,'store']);
 
 
 

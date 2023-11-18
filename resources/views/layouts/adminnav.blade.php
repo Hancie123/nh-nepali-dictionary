@@ -17,7 +17,7 @@
                     </div>
                 </div>
             </div>
-            <a href="index.html">
+            <a href="{{url('admin/dashboard')}}">
                 <img class="d-block mx-auto" src="{{ url('assets/img/white logo.png') }}" alt="logo.png" style="width:11rem;">
             </a>
             <a class="mobile-options waves-effect waves-light">
