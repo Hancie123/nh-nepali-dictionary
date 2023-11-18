@@ -108,7 +108,7 @@
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <label>App Name</label>
-                                                    @if($data)
+                                                    @if(isset($data['app_name']))
                                                     <input type="text" value="{{$data['app_name']}}" class="form-control" name="app_name" />
                                                 @else
                                                     <input type="text" class="form-control" name="app_name" />
@@ -119,7 +119,7 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label>App Slogan</label>
-                                                    @if($data)
+                                                    @if(isset($data['app_slogan']))
                                                     <input type="text" value="{{$data['app_slogan']}}" class="form-control" name="app_slogan" />
                                                 @else
                                                     <input type="text" class="form-control" name="app_slogan" />
