@@ -107,9 +107,7 @@
 
 
                                         <div class="container">
-                                            <table
-                                                class="table table-hover table-stripedtext-light"
-                                                id="table_data">
+                                            <table class="table table-hover table-stripedtext-light" id="table_data">
                                                 <thead class="bg-primary">
                                                     <tr>
                                                         <th>ID</th>
@@ -142,8 +140,16 @@
     <script>
         $(document).ready(function() {
             $('#table_data').DataTable({
-                "ajax": "/admin/dictionary",
-                "processing": true,
+                ajax: {
+                    url: '/admin/dictionary',
+                    type: 'GET',
+                    dataType: 'json',
+                    processing: true,
+                    serverSide: true,
+                },
+                processing: true,
+
+
 
                 "columns": [{
                         "data": "id"
@@ -158,6 +164,9 @@
                         "data": "nepali_meaning"
                     },
 
+                ],
+                order: [
+                    [0, 'desc']
                 ],
                 "dom": 'Bfrtip',
                 "buttons": [{
