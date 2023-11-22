@@ -4,7 +4,7 @@
         <div class="d-flex align-items-start py-2 mt-3 mx-auto text-center" style="width: 60%;">
             <div class="input-group">
                 <span class="input-group-text"><i class="fas fa-search" aria-hidden="true"></i></span>
-                <input class="form-control" placeholder="Search" type="text" wire:model.live="word">
+                <input class="form-control" id="searchInput" placeholder="Search" type="text" wire:model.live="word" onclick="this.select();">
             </div>
 
             <button wire:click="dictionarySearch" wire:loading.attr="disabled"

@@ -131,6 +131,12 @@
 
     </script>
 
+<script>
+    function selectAllText() {
+        document.getElementById("searchInput").select();
+    }
+</script>
+
 
 
     @include('layouts/footer')
