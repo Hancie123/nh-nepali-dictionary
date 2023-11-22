@@ -27,11 +27,7 @@ class DictionaryController extends Controller
 
     public function popularWords(){
 
-        $todayPopular=Dictionary::popularToday()->latest()->limit(15)->get();
-        $pouplarThisWeek=Dictionary::popularThisWeek()->latest()->limit(20)->get();
-        $popularThisMonth=Dictionary::popularThisMonth()->latest()->limit(30)->get();
-
-        return view('popular_words',compact('todayPopular','pouplarThisWeek','popularThisMonth'));
+        return view('popular_words');
     }
 
     public function getDictionaryData(){
