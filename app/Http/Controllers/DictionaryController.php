@@ -35,6 +35,7 @@ class DictionaryController extends Controller
     }
 
     public function getDictionaryData(){
+        dd(request()->all());
         $dictionary=Dictionary::latest()->get();
         return response()->json(['data'=>$dictionary]);
     }
