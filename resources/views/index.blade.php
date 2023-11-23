@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>NH Nepali Dictionary</title>
     @include('layouts/header')
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <meta property="og:title" content="NH Nepali Dictionary">
     <meta property="og:description"
         content="NH Nepali Dictionary is an online web application that gives a meaning of English words to Nepali.">
@@ -87,9 +88,9 @@
                         Share</a>
 
 
-                        <a href="#" class="btn btn-dark mb-0 me-2" id="pinterest-share-button">
-                            <i class="fab fa-pinterest me-1"></i> Pin it
-                        </a>
+                    <a href="#" class="btn btn-dark mb-0 me-2" id="pinterest-share-button">
+                        <i class="fab fa-pinterest me-1"></i> Pin it
+                    </a>
                 </div>
             </div>
         </div>
@@ -102,7 +103,9 @@
             var currentPageUrl = encodeURIComponent(window.location.href);
 
             // Customize the tweet text
-            var tweetText = encodeURIComponent('Check out NH Nepali Dictionary: Your Gateway to Nepali Language Excellence! #NHNepaliDictionary #LanguageLearning');
+            var tweetText = encodeURIComponent(
+                'Check out NH Nepali Dictionary: Your Gateway to Nepali Language Excellence! #NHNepaliDictionary #LanguageLearning'
+            );
 
             // Construct the Twitter share URL
             var twitterShareUrl = 'https://twitter.com/intent/tweet?url=' + currentPageUrl + '&text=' + tweetText;
@@ -113,30 +116,45 @@
 
 
         document.getElementById('pinterest-share-button').addEventListener('click', function() {
-        // Get the current page URL
-        var currentPageUrl = encodeURIComponent(window.location.href);
+            // Get the current page URL
+            var currentPageUrl = encodeURIComponent(window.location.href);
 
-        // Get the current page's image URL using Laravel's url() function
-        var imageUrl = encodeURIComponent("{{ url('assets/img/logo.png') }}");
+            // Get the current page's image URL using Laravel's url() function
+            var imageUrl = encodeURIComponent("{{ url('assets/img/logo.png') }}");
 
-        // Get the current page's description
-        var description = encodeURIComponent('NH Nepali Dictionary: Your Gateway to Nepali Language Excellence!');
+            // Get the current page's description
+            var description = encodeURIComponent(
+                'NH Nepali Dictionary: Your Gateway to Nepali Language Excellence!');
 
-        // Construct the Pinterest share URL
-        var pinterestShareUrl = 'https://www.pinterest.com/pin/create/button/?url=' + currentPageUrl + '&media=' + imageUrl + '&description=' + description;
+            // Construct the Pinterest share URL
+            var pinterestShareUrl = 'https://www.pinterest.com/pin/create/button/?url=' + currentPageUrl +
+                '&media=' + imageUrl + '&description=' + description;
 
-        // Open the Pinterest share dialog
-        window.open(pinterestShareUrl, '_blank');
-    });
-
+            // Open the Pinterest share dialog
+            window.open(pinterestShareUrl, '_blank');
+        });
     </script>
 
-<script>
-    function selectAllText() {
-        document.getElementById("searchInput").select();
-    }
-</script>
+    <script>
+        function selectAllText() {
+            document.getElementById("searchInput").select();
+        }
+    </script>
 
+    <script>
+        function textToAudio() {
+            let textToSpeak = document.getElementById("text-to-speech").textContent;
+
+            let speech = new SpeechSynthesisUtterance();
+            speech.lang = "en-US";
+            speech.text = textToSpeak;
+            speech.volume = 1;
+            speech.rate = 1;
+            speech.pitch = 1;
+
+            window.speechSynthesis.speak(speech);
+        }
+    </script>
 
 
     @include('layouts/footer')
