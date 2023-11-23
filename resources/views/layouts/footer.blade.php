@@ -4,7 +4,7 @@
         <div class=" row">
             <div class="col-md-3 mb-4 ms-auto">
                 <div>
-                    <h6 class="text-gradient text-primary font-weight-bolder">NH Nepali Dictionary</h6>
+                    <h6 class="text-gradient text-primary font-weight-bolder">{{$data['app_name']??null}}</h6>
                 </div>
                 <div>
                     <h6 class="mt-3 mb-2 opacity-8">Social</h6>
@@ -166,7 +166,7 @@
                         All rights reserved. Copyright ©
                         <script>
                             document.write(new Date().getFullYear())
-                        </script> NH Nepali Dictionary by <a href="{{url('/')}}"
+                        </script> {{$data['app_name']??null}} by <a href="{{url('/')}}"
                             target="_blank" wire:navigate>Hancie Phago and Nitesh Hamal
                         </a>.
                     </p>
