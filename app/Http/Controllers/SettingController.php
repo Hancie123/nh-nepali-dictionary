@@ -23,7 +23,7 @@ class SettingController extends Controller
             $data[$item->key] = $item->value;
         }
     }
-    
+
 
 
         return view('admin.setting',compact('notification','setting','data'));

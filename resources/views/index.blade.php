@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>NH Nepali Dictionary</title>
+    <title>{{$data['app_name']??null}}</title>
     @include('layouts/header')
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <meta property="og:title" content="NH Nepali Dictionary">
+    <meta property="og:title" content="{{$data['app_name']??null}}">
     <meta property="og:description"
-        content="NH Nepali Dictionary is an online web application that gives a meaning of English words to Nepali.">
+        content="{{$data['app_name']??null}} is an online web application that gives a meaning of English words to Nepali.">
     <meta property="og:image" content="{{ url('assets/img/logo.png') }}">
     <meta property="og:url" content="{{ request()->fullUrl() }}">
 
@@ -24,8 +24,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-7 text-center mx-auto">
-                        <h1 class="text-white pt-3 mt-n5">NH Nepali Dictionary</h1>
-                        <p class="lead text-white mt-3">Your Linguistic Companion in Every Context.<br />
+                        <h1 class="text-white pt-3 mt-n5">{{$data['app_name']??null}}</h1>
+                        <p class="lead text-white mt-3">{{$data['app_slogan']??null}}<br />
                         </p>
                     </div>
                 </div>
@@ -104,7 +104,7 @@
 
             // Customize the tweet text
             var tweetText = encodeURIComponent(
-                'Check out NH Nepali Dictionary: Your Gateway to Nepali Language Excellence! #NHNepaliDictionary #LanguageLearning'
+                'Check out {{$data['app_name']??null}}: Your Gateway to Nepali Language Excellence! #{{$data['app_name']??null}} #LanguageLearning'
             );
 
             // Construct the Twitter share URL
@@ -124,7 +124,7 @@
 
             // Get the current page's description
             var description = encodeURIComponent(
-                'NH Nepali Dictionary: Your Gateway to Nepali Language Excellence!');
+                '{{$data['app_name']??null}}: Your Gateway to Nepali Language Excellence!');
 
             // Construct the Pinterest share URL
             var pinterestShareUrl = 'https://www.pinterest.com/pin/create/button/?url=' + currentPageUrl +
