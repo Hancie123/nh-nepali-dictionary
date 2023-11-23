@@ -12,4 +12,8 @@ class Dictionary extends Model implements CanVisit
     use HasFactory;
     use HasVisits;
     protected $guarded=['id'];
+
+    public function userAddedMeaning(){
+        return $this->hasMany(UserAddedMeaning::class);
+    }
 }
