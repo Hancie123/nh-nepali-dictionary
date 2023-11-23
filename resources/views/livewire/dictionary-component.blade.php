@@ -29,15 +29,18 @@
             </div>
         </div>
     </form>
-    <p class="text-center p-5 text-dark">
+    <p class="text-center text-dark" id="text-to-speech">
         @if ($definition)
+        {{ $definition }}
+        <span><a href="#" onclick="textToAudio()"><i class='bx bx-volume-full bx-sm text-danger'></i></a></span>
         @elseif($nepaliMeaning)
         @else
             Search Meaning!
         @endif
-        {{ $definition }}
-        <br><br>{{ $nepaliMeaning }}
+
     </p>
+    <p class="text-center text-dark">{{ $nepaliMeaning }}</p>
+
 
 
     <div class="row h-100">
