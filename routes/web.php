@@ -56,12 +56,15 @@ Route::post('/complete_registration',[DeveloperController::class,'setNewUserPass
 Route::group(['middleware'=>'auth:web'], function () {
     Route::get('/admin/dashboard', [DashboardController::class, 'index']);
     Route::get('/logout', [LoginController::class, 'logout']);
-    Route::get('admin/meaning/management',[DictionaryController::class,'dictionaryManagement'])->name('admin.dictionary_management');
 
 
-    Route::get('admin/meaning/upload',[DictionaryController::class,'index']);
+
+    Route::get('admin/dictionary/upload',[DictionaryController::class,'index']);
     Route::get('admin/dictionary',[DictionaryController::class,'getDictionaryData']);
-    Route::post('admin/meaning/upload',[DictionaryController::class,'store']);
+    Route::post('admin/dictionary/upload',[DictionaryController::class,'store']);
+    Route::get('admin/dictionary/my-words',[DictionaryController::class,'myWords']);
+    Route::get('admin/dictionary/my-words/ajax',[DictionaryController::class,'myWordAjax']);
+    Route::get('admin/dictionary/management',[DictionaryController::class,'dictionaryManagement'])->name('admin.dictionary_management');
 
     Route::get('admin/contributors',[ContributorController::class,'index']);
     Route::get('admin/contributors/ajax',[ContributorController::class,'getDataAjax']);

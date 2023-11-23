@@ -24,6 +24,21 @@ class DictionaryController extends Controller
         return view('admin.dictionary_management',compact('notification'));
     }
 
+    public function myWords(){
+        $notification=Notification::latest()->limit(5)->get();
+
+
+        return view('admin.my_words',compact('notification'));
+    }
+    public function myWordAjax(){
+        $dictionary=Dictionary::join('user_added_meanings','user_added_meanings.word_id','=',
+        'dictionaries.id')->select('dictionaries.Words','dictionaries.Meaning',
+        'dictionaries.nepali_meaning','user_added_meanings.id')->where('user_added_meanings.user_id',auth()->user()->id)->get();
+
+        return response()->json(['data'=>$dictionary]);
+
+    }
+
 
     public function popularWords(){
 
