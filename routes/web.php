@@ -12,6 +12,7 @@ use App\Http\Controllers\SettingController;
 use App\Http\Controllers\SiteSettingController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\VisitorLogController;
+use App\Models\SiteSetting;
 use Illuminate\Support\Facades\Route;
 use Yajra\DataTables\Facades\DataTables;
 
@@ -28,16 +29,49 @@ use Yajra\DataTables\Facades\DataTables;
 
 Route::get('/',[DictionaryController::class,'dictionaryIndex'])->middleware('visitor');
 
-Route::get('/terms-conditions', function () {
-    return view('terms_conditions');
+Route::get('/terms-conditions', function ($settingable_type = null, $settingable_id = null) {
+    $site_setting = SiteSetting::where("settingable_type", $settingable_type)
+        ->where("settingable_id", $settingable_id)
+        ->get();
+    $data = [];
+    foreach ($site_setting as $item) {
+        if ($item->type == 'image') {
+            $data[$item->key] = $item->getFirstMediaUrl();
+        } else {
+            $data[$item->key] = $item->value;
+        }
+    }
+    return view('terms_conditions',compact('data'));
 });
 
-Route::get('/about-us', function () {
-    return view('about_us');
+Route::get('/about-us', function ($settingable_type = null, $settingable_id = null) {
+    $site_setting = SiteSetting::where("settingable_type", $settingable_type)
+        ->where("settingable_id", $settingable_id)
+        ->get();
+    $data = [];
+    foreach ($site_setting as $item) {
+        if ($item->type == 'image') {
+            $data[$item->key] = $item->getFirstMediaUrl();
+        } else {
+            $data[$item->key] = $item->value;
+        }
+    }
+    return view('about_us',compact('data'));
 });
 
-Route::get('/contact-us', function () {
-    return view('contact_us');
+Route::get('/contact-us', function ($settingable_type = null, $settingable_id = null) {
+    $site_setting = SiteSetting::where("settingable_type", $settingable_type)
+        ->where("settingable_id", $settingable_id)
+        ->get();
+    $data = [];
+    foreach ($site_setting as $item) {
+        if ($item->type == 'image') {
+            $data[$item->key] = $item->getFirstMediaUrl();
+        } else {
+            $data[$item->key] = $item->value;
+        }
+    }
+    return view('contact_us',compact('data'));
 });
 
 Route::get('/contributors',[ContributorController::class,'publicIndex']);
