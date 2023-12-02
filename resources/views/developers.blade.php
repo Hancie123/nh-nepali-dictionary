@@ -64,7 +64,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                @forelse ($data as $datas)
+                                @forelse ($user as $datas)
                                     <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                                         <div class="h-100 border p-4 rounded-lg text-center rounded">
                                             <img alt="team"

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Mail\DeveloperAccountMail;
 use App\Models\Notification;
 use App\Models\PasswordReset;
+use App\Models\SiteSetting;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -16,10 +17,24 @@ use Illuminate\Support\Str;
 class DeveloperController extends Controller
 {
 
-    public function index()
+    public function index($settingable_type = null, $settingable_id = null)
     {
-        $data = User::with('media')->whereIn('status',['admin','developer'])->latest()->get();
-        return view('developers', compact('data'));
+        $user = User::with('media')->whereIn('status',['admin','developer'])->latest()->get();
+
+        $site_setting = SiteSetting::where("settingable_type", $settingable_type)
+        ->where("settingable_id", $settingable_id)
+        ->get();
+        $data = [];
+        foreach ($site_setting as $item) {
+            if ($item->type == 'image') {
+                $data[$item->key] = $item->getFirstMediaUrl();
+            } else {
+                $data[$item->key] = $item->value;
+            }
+        }
+
+
+        return view('developers', compact('user','data'));
     }
 
     public function adminIndex(){
