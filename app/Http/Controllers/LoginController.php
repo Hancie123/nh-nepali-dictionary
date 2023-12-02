@@ -33,11 +33,11 @@ class LoginController extends Controller
             if (Auth::attempt($credential)) {
                 $user = auth()->user();
                 if ($user->status == 'admin') {
-                    sweetalert()->addSuccess('Welcome'. $user->name);
+                    sweetalert()->addSuccess('Welcome '. $user->name);
                     return redirect('/admin/dashboard');
 
                 } elseif ($user->status == 'developer') {
-                    sweetalert()->addSuccess('Welcome'. $user->name);
+                    sweetalert()->addSuccess('Welcome '. $user->name);
                     return redirect('/admin/dashboard');
                 }
             } else {
