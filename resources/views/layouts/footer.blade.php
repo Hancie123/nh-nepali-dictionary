@@ -125,11 +125,7 @@
                             </a>
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" target="_blank">
-                                Sponsorships
-                            </a>
-                        </li>
+                       
 
                     </ul>
                 </div>
