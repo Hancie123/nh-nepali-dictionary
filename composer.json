@@ -11,6 +11,7 @@
         "jenssegers/agent": "^2.6",
         "laravel/framework": "^10.10",
         "laravel/passport": "^11.10",
+        "laravel/pulse": "^1.0@beta",
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
         "laravolt/avatar": "^5.0",
@@ -73,6 +74,6 @@
             "php-http/discovery": true
         }
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "beta",
     "prefer-stable": true
 }
