@@ -24,10 +24,8 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        Gate::before(function ($user, $ability) {
-            if ($user->admin) {
-                return true;
-            }
+        Gate::define('viewPulse', function (User $user) {
+            return $user;
         });
     }
 
